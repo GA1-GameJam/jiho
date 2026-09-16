@@ -8,15 +8,20 @@ public class StageManager : MonoBehaviour
     [SerializeField] private Transform _player;
 
     [Header("공연 설정")]
-    [SerializeField] private float _stageDistance = 40f;
+    [SerializeField] private float _stageDistance = 100f;
     [SerializeField] private float _baseObstacleSpeed = 2f;
     [SerializeField] private float _restartDelay = 1f;
+
+    [Header("클리어")]
+    [SerializeField] private GameObject _clearPanel;
+    [SerializeField] private string _nextSceneName;
 
     private float _startPositionX;
     private float _remainingDistance;
     private float _obstacleSpeed;
     private bool _isPlaying;
     private bool _hasReachedEnd;
+    private bool _isCleared;
 
     public Transform Player => _player;
     public float RemainingDistance => _remainingDistance;
@@ -30,10 +35,25 @@ public class StageManager : MonoBehaviour
         _remainingDistance = _stageDistance;
         _obstacleSpeed = _baseObstacleSpeed;
         _isPlaying = true;
+
+        if (_clearPanel != null)
+        {
+            _clearPanel.SetActive(false);
+        }
     }
 
     private void Update()
     {
+        if (_isCleared)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                LoadNextStage();
+            }
+
+            return;
+        }
+
         if (!_isPlaying || _hasReachedEnd)
         {
             return;
@@ -57,6 +77,63 @@ public class StageManager : MonoBehaviour
     public void ResetSpeed()
     {
         _obstacleSpeed = _baseObstacleSpeed;
+    }
+
+    public void ClearStage()
+    {
+        if (!_isPlaying)
+        {
+            return;
+        }
+
+        float travelDistance = _player.position.x - _startPositionX;
+
+        if (travelDistance < _stageDistance)
+        {
+            return;
+        }
+
+        _isPlaying = false;
+        _isCleared = true;
+        _hasReachedEnd = true;
+        _remainingDistance = 0f;
+
+        PlayerMove playerMove = _player.GetComponent<PlayerMove>();
+        Rigidbody2D rigid = _player.GetComponent<Rigidbody2D>();
+
+        playerMove.enabled = false;
+        rigid.linearVelocity = Vector2.zero;
+        rigid.simulated = false;
+
+        if (_clearPanel != null)
+        {
+            _clearPanel.SetActive(true);
+        }
+
+        Debug.Log("스테이지 클리어!");
+    }
+
+    public void LoadNextStage()
+    {
+        if (!_isCleared)
+        {
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_nextSceneName))
+        {
+            Debug.Log("다음 스테이지가 아직 설정되지 않았습니다.");
+            return;
+        }
+
+        if (!Application.CanStreamedLevelBeLoaded(_nextSceneName))
+        {
+            Debug.LogWarning("다음 스테이지 이름과 Build Profiles의 Scene List를 확인하세요.");
+            return;
+        }
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(_nextSceneName);
     }
 
     public void FailStage()
