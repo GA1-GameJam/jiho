@@ -1,5 +1,6 @@
 # 🎪 사파 삐에로의 서커스
-
+<img width="1670" height="1210" alt="스크린샷 2026-09-16 143500" src="https://github.com/user-attachments/assets/699df3b9-2eba-477f-a0f4-d51d06f3928b" />
+<img width="1630" height="1224" alt="스크린샷 2026-09-16 143450" src="https://github.com/user-attachments/assets/a9fa2358-a331-4762-9d0c-8039332540e3" />
 > **죽지 않을 만큼만 위험하게.**
 
 망해가는 서커스단을 살리기 위해  
