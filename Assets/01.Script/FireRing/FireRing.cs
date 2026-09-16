@@ -54,7 +54,6 @@ public class FireRing : MonoBehaviour
         position.x -= _stageManager.ObstacleSpeed * Time.fixedDeltaTime;
         _rigid.MovePosition(position);
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!_isSpawned || _hasHit || !_stageManager.IsPlaying)
@@ -62,14 +61,15 @@ public class FireRing : MonoBehaviour
             return;
         }
 
-        PlayerMove player = other.GetComponentInParent<PlayerMove>();
+        PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
 
-        if (player == null)
+        if (playerHealth == null)
         {
             return;
         }
 
         _hasHit = true;
-        Debug.Log("불고리 접촉!");
+        playerHealth.TakeDamage();
     }
+   
 }

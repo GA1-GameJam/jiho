@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class StageManager : MonoBehaviour
     [Header("공연 설정")]
     [SerializeField] private float _stageDistance = 40f;
     [SerializeField] private float _baseObstacleSpeed = 2f;
+    [SerializeField] private float _restartDelay = 1f;
 
     private float _startPositionX;
     private float _remainingDistance;
@@ -42,7 +45,7 @@ public class StageManager : MonoBehaviour
         if (_remainingDistance <= 0f)
         {
             _hasReachedEnd = true;
-            Debug.Log("목표 거리 도달혔다! 불고리 생성을 종료혀.");
+            Debug.Log("목표 거리 도달! 불고리 생성을 종료합니다.");
         }
     }
 
@@ -54,5 +57,25 @@ public class StageManager : MonoBehaviour
     public void ResetSpeed()
     {
         _obstacleSpeed = _baseObstacleSpeed;
+    }
+
+    public void FailStage()
+    {
+        if (!_isPlaying)
+        {
+            return;
+        }
+
+        _isPlaying = false;
+        Debug.Log("공연 실패! 잠시 후 다시 시작합니다.");
+        StartCoroutine(RestartStage());
+    }
+
+    private IEnumerator RestartStage()
+    {
+        yield return new WaitForSecondsRealtime(_restartDelay);
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
