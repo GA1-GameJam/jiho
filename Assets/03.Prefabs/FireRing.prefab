@@ -572,3 +572,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireRing
   _returnDistance: 12
+  _damageCollider: {fileID: 5841299172266205628}

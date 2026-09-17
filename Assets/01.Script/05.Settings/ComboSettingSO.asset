@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfe84acb5f4ce74d90a01354e3b660c, type: 3}
+  m_Name: ComboSettingSO
+  m_EditorClassIdentifier: Assembly-CSharp::ComboSettingSO
+  _safeCombo: 0
+  _goodCombo: 1
+  _dangerCombo: 1
+  _extremeCombo: 1
+  _recoveryCombo: 1
+  _comboPerSpeedStep: 3
+  _speedIncreasePerStep: 0.2
+  _maxSpeedMultiplier: 1.6

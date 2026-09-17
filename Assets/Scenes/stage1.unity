@@ -2662,6 +2662,7 @@ GameObject:
   - component: {fileID: 1579037165}
   - component: {fileID: 1579037166}
   - component: {fileID: 1579037167}
+  - component: {fileID: 1579037168}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2683,7 +2684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   _moveSpeed: 4
   _airMoveSpeed: 4
-  _jumpSpeed: 10
+  _jumpSpeed: 15
   _groundCheck: {fileID: 1215300783}
   _groundCheckRadius: 0.1
   _groundLayer:
@@ -2785,7 +2786,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.04, y: 1.59, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1215300783}
@@ -3061,6 +3062,21 @@ PolygonCollider2D:
       - {x: -0.305, y: 0.655}
       - {x: -0.295, y: 0.655}
   m_UseDelaunayMesh: 1
+--- !u!114 &1579037168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579037158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b579201cbb2b98c46bc23a7dfc6dc228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StuntJudge
+  _stuntSettings: {fileID: 11400000, guid: 912518d8a40766c40a0bee3ba61e0053, type: 2}
+  _footPoint: {fileID: 1748701408}
+  _bodyCollider: {fileID: 1579037167}
 --- !u!1 &1616847699
 GameObject:
   m_ObjectHideFlags: 0

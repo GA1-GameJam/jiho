@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMove))]
@@ -26,6 +27,8 @@ public class PlayerHealth : MonoBehaviour
     private bool _isVisible;
 
     public int Life => _life;
+
+    public event Action Damaged;
 
     private void Awake()
     {
@@ -88,6 +91,7 @@ public class PlayerHealth : MonoBehaviour
         _stageManager.ResetSpeed();
 
         Debug.Log($"피격! 남은 LIFE: {_life}");
+        Damaged?.Invoke();
 
         if (_life <= 0)
         {
