@@ -39,14 +39,17 @@ public sealed class BalloonHud : MonoBehaviour
         int enemyCount,
         bool isChangingPhase,
         bool isGameOver,
-        bool isAllClear,
+        PlayerNumber? roundWinner,
         PlayerInput input)
     {
         _scoreText.text = $"SCORE {score:000000}";
         _phaseText.text = $"PHASE {phase}";
-        _playerOneLivesText.text = $"P1 LIVES {playerOneLives}";
-        _playerTwoLivesText.text = $"P2 LIVES {playerTwoLives}";
-        _enemyCountText.text = $"ENEMIES {enemyCount}";
+        _playerOneLivesText.text =
+            $"P1 LIVES {playerOneLives}";
+        _playerTwoLivesText.text =
+            $"P2 LIVES {playerTwoLives}";
+        _enemyCountText.text =
+            $"ENEMIES {enemyCount}";
 
         _playerOneControlsText.text =
             $"P1  {GetControlsLabel(PlayerNumber.One, input)}";
@@ -57,16 +60,31 @@ public sealed class BalloonHud : MonoBehaviour
         RefreshMessage(
             isChangingPhase,
             isGameOver,
-            isAllClear,
+            roundWinner,
             input);
     }
 
     private void RefreshMessage(
         bool isChangingPhase,
         bool isGameOver,
-        bool isAllClear,
+        PlayerNumber? roundWinner,
         PlayerInput input)
     {
+        if (roundWinner.HasValue)
+        {
+            string winnerText =
+                roundWinner.Value == PlayerNumber.One
+                    ? "P1 WINS"
+                    : "P2 WINS";
+
+            string subtitle = isGameOver
+                ? $"Press {input.Restart} to restart"
+                : "Next stage incoming";
+
+            ShowMessage(winnerText, subtitle);
+            return;
+        }
+
         if (isGameOver)
         {
             ShowMessage(
@@ -76,20 +94,11 @@ public sealed class BalloonHud : MonoBehaviour
             return;
         }
 
-        if (isAllClear)
-        {
-            ShowMessage(
-                "ALL CLEAR",
-                $"Press {input.Restart} to restart");
-
-            return;
-        }
-
         if (isChangingPhase)
         {
             ShowMessage(
-                "PHASE CLEAR",
-                "Next phase incoming");
+                "ROUND OVER",
+                "Next stage incoming");
 
             return;
         }
@@ -97,7 +106,9 @@ public sealed class BalloonHud : MonoBehaviour
         _messagePanel.SetActive(false);
     }
 
-    private void ShowMessage(string title, string subtitle)
+    private void ShowMessage(
+        string title,
+        string subtitle)
     {
         _messageTitleText.text = title;
         _messageSubtitleText.text = subtitle;
@@ -120,6 +131,7 @@ public sealed class BalloonHud : MonoBehaviour
             "/",
             input.GetFlapKeys(playerNumber));
 
-        return $"{left} / {right} : move    {flap} : flap";
+        return
+            $"{left} / {right} : move    {flap} : flap";
     }
 }

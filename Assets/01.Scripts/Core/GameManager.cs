@@ -5,25 +5,23 @@ public sealed class GameManager : MonoBehaviour
 {
     [Header("게임 진행")]
     [SerializeField] private int _targetFrameRate = 60;
-    [SerializeField] private int _startingLives = 3;
-    [SerializeField] private int _maximumPhase = 3;
+    [SerializeField, Min(1)] private int _startingLives = 3;
     [SerializeField] private int _enemyScore = 500;
-    [SerializeField] private float _phaseDelay = 1.2f;
-    [SerializeField] private float _respawnDelay = 1.1f;
-    [SerializeField] private float _respawnInvincibility = 1.4f;
+    [SerializeField, Min(0f)] private float _winSoundDelay = 0.6f;
+    [SerializeField, Min(0f)] private float _nextStageDelay = 1.5f;
 
     [Header("카메라와 스폰")]
     [SerializeField] private Camera _gameCamera;
     [SerializeField] private int _phaseEnemyOffset = 2;
     [SerializeField] private int _enemyPoolCapacity = 5;
-    
+
     [Header("플레이어 스폰 위치")]
     [SerializeField] private Transform _playerOneSpawn;
     [SerializeField] private Transform _playerTwoSpawn;
 
     [Header("적 스폰 위치")]
     [SerializeField] private Transform[] _enemySpawnPoints;
-    
+
     [Header("선택 프리팹")]
     [SerializeField] private GameObject[] _playerPrefabs;
     [SerializeField] private GameObject[] _enemyPrefabs;
@@ -35,6 +33,12 @@ public sealed class GameManager : MonoBehaviour
     [SerializeField] private BalloonPopEffect _popEffect;
     [SerializeField] private RetroFactory _retroFactory;
 
+    [Header("오디오")]
+    [SerializeField] private AudioSource _bgmSource;
+    [SerializeField] private AudioSource _sfxSource;
+    [SerializeField] private AudioClip _winSound;
+    [SerializeField] private AudioClip _balloonPopSound;
+
     private GameStateManager _gameStateManager;
     private BalloonPopPool _popPool;
     private FighterSpawner _spawner;
@@ -42,7 +46,6 @@ public sealed class GameManager : MonoBehaviour
     internal PlayerInput Input => _input;
     internal bool IsPlaying => _gameStateManager.IsPlaying;
     internal int StartingLives => _startingLives;
-    internal int MaximumPhase => _maximumPhase;
     internal int EnemyScore => _enemyScore;
     internal int PhaseEnemyOffset => _phaseEnemyOffset;
     internal int EnemyPoolCapacity => _enemyPoolCapacity;
@@ -63,6 +66,7 @@ public sealed class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = _targetFrameRate;
+
         if (_gameCamera == null)
         {
             _gameCamera = Camera.main;
@@ -70,14 +74,27 @@ public sealed class GameManager : MonoBehaviour
 
         if (_gameCamera == null)
         {
-            Debug.LogError("GameManager에 Main Camera를 연결해주세요.", this);
+            Debug.LogError(
+                "GameManager에 Main Camera를 연결해주세요.",
+                this);
+
             enabled = false;
             return;
         }
 
         _mapBoundary.SetCamera(_gameCamera);
-        _spawner = new FighterSpawner(transform, this, _playerPrefabs, _enemyPrefabs);
-        _popPool = new BalloonPopPool(transform, _popEffect, RetroFactory.GetSquare());
+
+        _spawner = new FighterSpawner(
+            transform,
+            this,
+            _playerPrefabs,
+            _enemyPrefabs);
+
+        _popPool = new BalloonPopPool(
+            transform,
+            _popEffect,
+            RetroFactory.GetSquare());
+
         _spawner.SpawnAllPlayers();
         _spawner.SpawnPhase(_gameStateManager.Phase);
     }
@@ -91,11 +108,13 @@ public sealed class GameManager : MonoBehaviour
 
         UpdateHud();
 
-        if (!_gameStateManager.IsPlaying && _input.RestartPressed)
+        if (_gameStateManager.IsGameOver
+            && _input.RestartPressed)
         {
             Restart();
         }
     }
+
     private void UpdateHud()
     {
         _hud.Refresh(
@@ -106,7 +125,7 @@ public sealed class GameManager : MonoBehaviour
             _spawner.ActiveEnemyCount,
             _gameStateManager.IsChangingPhase,
             _gameStateManager.IsGameOver,
-            _gameStateManager.IsAllClear,
+            _gameStateManager.RoundWinner,
             _input);
     }
 
@@ -116,9 +135,17 @@ public sealed class GameManager : MonoBehaviour
         _spawner?.Clear();
     }
 
-    internal void BalloonPopped(Vector3 position) => _popPool?.Play(position);
-    internal PlayerController GetNearestPlayer(Vector3 position) => _spawner.GetNearestPlayer(position);
-    
+    internal void BalloonPopped(Vector3 position)
+    {
+        _popPool?.Play(position);
+        PlaySound(_balloonPopSound);
+    }
+
+    internal PlayerController GetNearestPlayer(Vector3 position)
+    {
+        return _spawner.GetNearestPlayer(position);
+    }
+
     internal Vector2 GetPlayerSpawn(PlayerNumber playerNumber)
     {
         return playerNumber == PlayerNumber.One
@@ -133,23 +160,108 @@ public sealed class GameManager : MonoBehaviour
 
     internal void EnemyDefeated(EnemyController enemy)
     {
-        if (_spawner.RemoveEnemy(enemy) && _gameStateManager.RegisterEnemyDefeat(_spawner.ActiveEnemyCount))
+        if (_spawner.RemoveEnemy(enemy))
         {
-            StartCoroutine(NextPhase());
+            _gameStateManager.RegisterEnemyDefeat();
         }
     }
 
     internal void PlayerDefeated(PlayerController player)
     {
-        if (player != null && _gameStateManager.IsPlaying && _gameStateManager.RegisterPlayerDefeat(player.PlayerNumber))
+        if (player == null)
         {
-            StartCoroutine(RespawnPlayer(player.PlayerNumber));
+            return;
         }
+
+        bool wasRegistered =
+            _gameStateManager.RegisterPlayerDefeat(
+                player.PlayerNumber);
+
+        if (!wasRegistered)
+        {
+            return;
+        }
+
+        StartCoroutine(FinishRound());
     }
 
-    internal void Wrap(Transform target) => _mapBoundary.Wrap(target);
-    internal void ClampVertical(Transform target, Rigidbody2D body) => _mapBoundary.ClampVertical(target, body);
+    internal void Wrap(Transform target)
+    {
+        _mapBoundary.Wrap(target);
+    }
 
+    internal void ClampVertical(
+        Transform target,
+        Rigidbody2D body)
+    {
+        _mapBoundary.ClampVertical(target, body);
+    }
+
+    private IEnumerator FinishRound()
+    {
+        yield return new WaitForSeconds(_winSoundDelay);
+
+        StopBackgroundMusic();
+        PlaySound(_winSound);
+
+        if (_gameStateManager.IsGameOver)
+        {
+            yield break;
+        }
+
+        float winSoundLength = _winSound != null
+            ? _winSound.length
+            : 0f;
+
+        float stageWaitTime = Mathf.Max(
+            _nextStageDelay,
+            winSoundLength);
+
+        yield return new WaitForSeconds(stageWaitTime);
+
+        _popPool.Reset();
+        _spawner.Reset();
+
+        _gameStateManager.AdvancePhase();
+
+        _spawner.SpawnAllPlayers();
+        _spawner.SpawnPhase(_gameStateManager.Phase);
+
+        _gameStateManager.CompletePhaseChange();
+
+        PlayBackgroundMusic();
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (_sfxSource == null || clip == null)
+        {
+            return;
+        }
+
+        _sfxSource.PlayOneShot(clip);
+    }
+
+    private void StopBackgroundMusic()
+    {
+        if (_bgmSource == null)
+        {
+            return;
+        }
+
+        _bgmSource.Stop();
+    }
+
+    private void PlayBackgroundMusic()
+    {
+        if (_bgmSource == null)
+        {
+            return;
+        }
+
+        _bgmSource.Stop();
+        _bgmSource.Play();
+    }
     private bool HasRequiredComponents()
     {
         bool hasComponents =
@@ -167,7 +279,9 @@ public sealed class GameManager : MonoBehaviour
         }
 
         bool hasSpawnPoints = HasRequiredSpawnPoints();
-        bool isHudConfigured = _hud != null && _hud.IsConfigured;
+        bool isHudConfigured =
+            _hud != null
+            && _hud.IsConfigured;
 
         if (_hud != null && !isHudConfigured)
         {
@@ -176,12 +290,15 @@ public sealed class GameManager : MonoBehaviour
                 _hud);
         }
 
-        return hasComponents && hasSpawnPoints && isHudConfigured;
+        return hasComponents
+            && hasSpawnPoints
+            && isHudConfigured;
     }
 
     private bool HasRequiredSpawnPoints()
     {
-        if (_playerOneSpawn == null || _playerTwoSpawn == null)
+        if (_playerOneSpawn == null
+            || _playerTwoSpawn == null)
         {
             Debug.LogError(
                 "GameManager에 P1Spawn과 P2Spawn을 연결해주세요.",
@@ -190,7 +307,8 @@ public sealed class GameManager : MonoBehaviour
             return false;
         }
 
-        if (_enemySpawnPoints == null || _enemySpawnPoints.Length == 0)
+        if (_enemySpawnPoints == null
+            || _enemySpawnPoints.Length == 0)
         {
             Debug.LogError(
                 "GameManager에 적 스폰 위치를 한 개 이상 연결해주세요.",
@@ -199,7 +317,9 @@ public sealed class GameManager : MonoBehaviour
             return false;
         }
 
-        for (int index = 0; index < _enemySpawnPoints.Length; index++)
+        for (int index = 0;
+             index < _enemySpawnPoints.Length;
+             index++)
         {
             if (_enemySpawnPoints[index] != null)
             {
@@ -216,30 +336,16 @@ public sealed class GameManager : MonoBehaviour
         return true;
     }
 
-    private IEnumerator NextPhase()
-    {
-        yield return new WaitForSeconds(_phaseDelay);
-        _gameStateManager.AdvancePhase();
-        _spawner.SpawnPhase(_gameStateManager.Phase);
-        _gameStateManager.CompletePhaseChange();
-    }
-
-    private IEnumerator RespawnPlayer(PlayerNumber playerNumber)
-    {
-        yield return new WaitForSeconds(_respawnDelay);
-        if (_gameStateManager.CanRespawn(playerNumber))
-        {
-            _spawner.SpawnPlayer(playerNumber).SetInvincible(_respawnInvincibility);
-        }
-    }
-
     private void Restart()
     {
         StopAllCoroutines();
+
         _popPool.Reset();
         _spawner.Reset();
         _gameStateManager.Reset();
+
         _spawner.SpawnAllPlayers();
         _spawner.SpawnPhase(_gameStateManager.Phase);
+        PlayBackgroundMusic();
     }
 }
