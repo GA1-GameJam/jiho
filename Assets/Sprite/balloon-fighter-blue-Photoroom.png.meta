@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_8
+      name: walk
       rect:
         serializedVersion: 2
         x: 12
@@ -416,7 +416,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_17
+      name: float
       rect:
         serializedVersion: 2
         x: 11
@@ -526,7 +526,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_23
+      name: walk_01
       rect:
         serializedVersion: 2
         x: 11
@@ -548,7 +548,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_24
+      name: walk_02
       rect:
         serializedVersion: 2
         x: 36
@@ -614,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_29
+      name: walk_03
       rect:
         serializedVersion: 2
         x: 60
@@ -636,7 +636,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_30
+      name: Flap_01
       rect:
         serializedVersion: 2
         x: 11
@@ -658,7 +658,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_31
+      name: Flap_02
       rect:
         serializedVersion: 2
         x: 35
@@ -680,7 +680,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_32
+      name: Flap_03
       rect:
         serializedVersion: 2
         x: 59
@@ -768,7 +768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_36
+      name: Turn_01
       rect:
         serializedVersion: 2
         x: 10
@@ -790,7 +790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_37
+      name: Turn_02
       rect:
         serializedVersion: 2
         x: 35
@@ -834,7 +834,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_39
+      name: Fall_02
       rect:
         serializedVersion: 2
         x: 32
@@ -856,7 +856,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_40
+      name: Fall_03
       rect:
         serializedVersion: 2
         x: 58
@@ -900,7 +900,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_42
+      name: Die_01
       rect:
         serializedVersion: 2
         x: 8
@@ -922,7 +922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_43
+      name: Die_02
       rect:
         serializedVersion: 2
         x: 34
@@ -1010,7 +1010,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_48
+      name: Refill_01
       rect:
         serializedVersion: 2
         x: 12
@@ -1032,7 +1032,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_49
+      name: Rifill_02
       rect:
         serializedVersion: 2
         x: 35
@@ -1076,7 +1076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_51
+      name: what
       rect:
         serializedVersion: 2
         x: 11
@@ -1230,7 +1230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balloon-fighter-blue-Photoroom_0
+      name: Fall_01
       rect:
         serializedVersion: 2
         x: 8
@@ -1260,7 +1260,7 @@ TextureImporter:
         width: 13
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1289,7 +1289,18 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      balloon-fighter-blue-Photoroom_0: 2191008936306186442
+      Die_01: 7886738445602581993
+      Die_02: 1370739539253567007
+      Fall_01: 2191008936306186442
+      Fall_02: 3924144507474624604
+      Fall_03: 1806876300673169390
+      Flap_01: 2259199823523370929
+      Flap_02: -5952138695149752265
+      Flap_03: -1232246976179884633
+      Refill_01: -6527432921135675947
+      Rifill_02: 6980902650972547954
+      Turn_01: -1573144444309461142
+      Turn_02: 1469338058098406916
       balloon-fighter-blue-Photoroom_1: 3929339546620651083
       balloon-fighter-blue-Photoroom_10: -1669845443970682147
       balloon-fighter-blue-Photoroom_11: -2898845711152467110
@@ -1298,45 +1309,29 @@ TextureImporter:
       balloon-fighter-blue-Photoroom_14: -8260022799656294379
       balloon-fighter-blue-Photoroom_15: -9181504485300216892
       balloon-fighter-blue-Photoroom_16: 8614707415486606057
-      balloon-fighter-blue-Photoroom_17: 2168825853152915710
       balloon-fighter-blue-Photoroom_18: 3952320427641030949
       balloon-fighter-blue-Photoroom_19: 4601604154244030708
       balloon-fighter-blue-Photoroom_2: 7072106772517788727
       balloon-fighter-blue-Photoroom_20: -894860071259168904
       balloon-fighter-blue-Photoroom_21: 3531326690102692506
       balloon-fighter-blue-Photoroom_22: 1216533537703533109
-      balloon-fighter-blue-Photoroom_23: -4028435340340975369
-      balloon-fighter-blue-Photoroom_24: 4162496256149757827
       balloon-fighter-blue-Photoroom_25: 8664199582665478280
       balloon-fighter-blue-Photoroom_26: 6438047784339065883
       balloon-fighter-blue-Photoroom_27: 2804441288156207864
       balloon-fighter-blue-Photoroom_28: -4620822625782470165
-      balloon-fighter-blue-Photoroom_29: 8538202937561385570
       balloon-fighter-blue-Photoroom_3: 7014609763758887653
-      balloon-fighter-blue-Photoroom_30: 2259199823523370929
-      balloon-fighter-blue-Photoroom_31: -5952138695149752265
-      balloon-fighter-blue-Photoroom_32: -1232246976179884633
       balloon-fighter-blue-Photoroom_33: 9020478670644736202
       balloon-fighter-blue-Photoroom_34: 8015338446717424582
       balloon-fighter-blue-Photoroom_35: 5843822284057917181
-      balloon-fighter-blue-Photoroom_36: -1573144444309461142
-      balloon-fighter-blue-Photoroom_37: 1469338058098406916
       balloon-fighter-blue-Photoroom_38: -8420026911675627956
-      balloon-fighter-blue-Photoroom_39: 3924144507474624604
       balloon-fighter-blue-Photoroom_4: 3145631655635804849
-      balloon-fighter-blue-Photoroom_40: 1806876300673169390
       balloon-fighter-blue-Photoroom_41: 1772950711271234740
-      balloon-fighter-blue-Photoroom_42: 7886738445602581993
-      balloon-fighter-blue-Photoroom_43: 1370739539253567007
       balloon-fighter-blue-Photoroom_44: -7977594692663846682
       balloon-fighter-blue-Photoroom_45: 4401537948268761130
       balloon-fighter-blue-Photoroom_46: 6462972655102631495
       balloon-fighter-blue-Photoroom_47: 7735608526096113588
-      balloon-fighter-blue-Photoroom_48: -6527432921135675947
-      balloon-fighter-blue-Photoroom_49: 6980902650972547954
       balloon-fighter-blue-Photoroom_5: 9017329726367231571
       balloon-fighter-blue-Photoroom_50: -6433256517867977119
-      balloon-fighter-blue-Photoroom_51: 1372603034200334545
       balloon-fighter-blue-Photoroom_52: -782788502084768446
       balloon-fighter-blue-Photoroom_53: -5293296220249614132
       balloon-fighter-blue-Photoroom_54: -4391019423284019352
@@ -1345,8 +1340,13 @@ TextureImporter:
       balloon-fighter-blue-Photoroom_57: -3659500158608632707
       balloon-fighter-blue-Photoroom_6: -3196363944993455774
       balloon-fighter-blue-Photoroom_7: 3458921185031311128
-      balloon-fighter-blue-Photoroom_8: -6286359127319707133
       balloon-fighter-blue-Photoroom_9: -3246204715116878048
+      float: 2168825853152915710
+      walk: -6286359127319707133
+      walk_01: -4028435340340975369
+      walk_02: 4162496256149757827
+      walk_03: 8538202937561385570
+      what: 1372603034200334545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
