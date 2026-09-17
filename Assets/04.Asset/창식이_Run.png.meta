@@ -53,7 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -128,9 +141,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0c2ce60d6becd514d93e95899f2c2bb7
+      spriteID: e772061dffffffff0800000000000000
       internalID: -782227586
       vertices: []
       indices: 
@@ -150,9 +163,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 74f603e8bc6205e4c9ccabe96e347b6e
+      spriteID: a7c15a24000000000800000000000000
       internalID: 1118116986
       vertices: []
       indices: 
@@ -172,16 +185,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 94fe7651fd7dc194480d4435bb8f0438
+      spriteID: 593db1dcffffffff0800000000000000
       internalID: -853814379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_3"
+      name: "\uCC3D\uC2DD\uC774_Run_7"
       rect:
         serializedVersion: 2
         x: 768
@@ -194,16 +207,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bdace514cad5fd348a8c86eeb0d75c56
+      spriteID: 83623561000000000800000000000000
       internalID: 374548024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_4"
+      name: "\uCC3D\uC2DD\uC774_Run"
       rect:
         serializedVersion: 2
         x: 0
@@ -216,16 +229,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f9c19ffdbcf51ed45bafec52ad45071d
+      spriteID: 33881149ffffffff0800000000000000
       internalID: -1810790349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_5"
+      name: "\uCC3D\uC2DD\uC774_Run_6"
       rect:
         serializedVersion: 2
         x: 256
@@ -238,16 +251,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 377b42d1ba5cb214a9d38578a6c6843d
+      spriteID: 430e9c85000000000800000000000000
       internalID: 1489625140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_6"
+      name: "\uCC3D\uC2DD\uC774_Run_64"
       rect:
         serializedVersion: 2
         x: 512
@@ -260,16 +273,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 47d497a57d2a02b4ab6cfb955fddcc99
+      spriteID: cbefc9c3000000000800000000000000
       internalID: 1016921788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_7"
+      name: "\uCC3D\uC2DD\uC774_Run_3"
       rect:
         serializedVersion: 2
         x: 768
@@ -282,9 +295,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 47658279b2b513c41bedff503151e8ff
+      spriteID: 918d14a5000000000800000000000000
       internalID: 1514264601
       vertices: []
       indices: 
@@ -294,8 +307,8 @@ TextureImporter:
       name: "\uCC3D\uC2DD\uC774_Run_8"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 4
+        y: 251
         width: 256
         height: 256
       alignment: 7
@@ -304,16 +317,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2038e4d265a61774dbe8c2a7b9ca7481
+      spriteID: 6f9b8055000000000800000000000000
       internalID: 1426635254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_9"
+      name: "\uCC3D\uC2DD\uC774_Run_105"
       rect:
         serializedVersion: 2
         x: 256
@@ -326,16 +339,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d4068f6ea4bc65543863b6733a3f812b
+      spriteID: 750ca22cffffffff0800000000000000
       internalID: -1037385641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_10"
+      name: "\uCC3D\uC2DD\uC774_Run_4"
       rect:
         serializedVersion: 2
         x: 512
@@ -348,16 +361,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c68bed474de275647828914040bdfa00
+      spriteID: 74503897000000000800000000000000
       internalID: 2038629703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_11"
+      name: "\uCC3D\uC2DD\uC774_Run_114"
       rect:
         serializedVersion: 2
         x: 768
@@ -370,16 +383,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 91dd81693e5a316448902938e0ae39fe
+      spriteID: c6fa268cffffffff0800000000000000
       internalID: -933056660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_12"
+      name: "\uCC3D\uC2DD\uC774_Run_92"
       rect:
         serializedVersion: 2
         x: 0
@@ -392,16 +405,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 237c73bcfc7acd14895a8487f61ec42a
+      spriteID: a2dd6214000000000800000000000000
       internalID: 1093066026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_13"
+      name: "\uCC3D\uC2DD\uC774_Run_"
       rect:
         serializedVersion: 2
         x: 256
@@ -414,16 +427,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2161b01f6c57d5f499416f7a8dbf5d15
+      spriteID: 938505c2000000000800000000000000
       internalID: 743462969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_14"
+      name: "\uCC3D\uC2DD\uC774_Run_144"
       rect:
         serializedVersion: 2
         x: 512
@@ -436,16 +449,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 30255e1275efed0438eebc30f908d8d0
+      spriteID: 807755f8ffffffff0800000000000000
       internalID: -1890224376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uCC3D\uC2DD\uC774_Run_15"
+      name: 5
       rect:
         serializedVersion: 2
         x: 768
@@ -458,9 +471,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ba18654ebd016ba49b2f90b6d545f319
+      spriteID: 4ec1e414000000000800000000000000
       internalID: 1095638244
       vertices: []
       indices: 
@@ -480,6 +493,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      4: 1016921788
+      5: 1095638244
       frame_0: -200551937
       frame_1: 160024939
       frame_10: 1901576818
@@ -496,22 +511,21 @@ TextureImporter:
       frame_7: -179667808
       frame_8: -675182360
       frame_9: -584955637
+      "\uCC3D\uC2DD\uC774_Run": -1810790349
+      "\uCC3D\uC2DD\uC774_Run_": 743462969
       "\uCC3D\uC2DD\uC774_Run_0": -782227586
       "\uCC3D\uC2DD\uC774_Run_1": 1118116986
-      "\uCC3D\uC2DD\uC774_Run_10": 2038629703
-      "\uCC3D\uC2DD\uC774_Run_11": -933056660
-      "\uCC3D\uC2DD\uC774_Run_12": 1093066026
-      "\uCC3D\uC2DD\uC774_Run_13": 743462969
-      "\uCC3D\uC2DD\uC774_Run_14": -1890224376
-      "\uCC3D\uC2DD\uC774_Run_15": 1095638244
+      "\uCC3D\uC2DD\uC774_Run_105": -1037385641
+      "\uCC3D\uC2DD\uC774_Run_114": -933056660
+      "\uCC3D\uC2DD\uC774_Run_144": -1890224376
       "\uCC3D\uC2DD\uC774_Run_2": -853814379
-      "\uCC3D\uC2DD\uC774_Run_3": 374548024
-      "\uCC3D\uC2DD\uC774_Run_4": -1810790349
-      "\uCC3D\uC2DD\uC774_Run_5": 1489625140
-      "\uCC3D\uC2DD\uC774_Run_6": 1016921788
-      "\uCC3D\uC2DD\uC774_Run_7": 1514264601
+      "\uCC3D\uC2DD\uC774_Run_3": 1514264601
+      "\uCC3D\uC2DD\uC774_Run_4": 2038629703
+      "\uCC3D\uC2DD\uC774_Run_6": 1489625140
+      "\uCC3D\uC2DD\uC774_Run_64": 1016921788
+      "\uCC3D\uC2DD\uC774_Run_7": 374548024
       "\uCC3D\uC2DD\uC774_Run_8": 1426635254
-      "\uCC3D\uC2DD\uC774_Run_9": -1037385641
+      "\uCC3D\uC2DD\uC774_Run_92": 1093066026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
