@@ -79,18 +79,43 @@ public sealed class PlayerController : Fighter
 
     protected override void OnBalloonLost()
     {
-        Body.AddForce(Vector2.down * _balloonLossImpulse, ForceMode2D.Impulse);
-        if (BalloonCount > 0) return;
+        Body.AddForce(
+            Vector2.down * _balloonLossImpulse,
+            ForceMode2D.Impulse);
+
+        if (BalloonCount > 0)
+        {
+            return;
+        }
+
+        Die();
+    }
+
+    protected override void OnFellIntoWater()
+    {
+        Die();
+    }
+
+    protected override float GetHitProtection() => _hitProtection;
+
+    private void Die()
+    {
+        if (IsDead)
+        {
+            return;
+        }
+
         MarkDead();
+
         BodyCollider.enabled = false;
         Body.gravityScale = _deathGravity;
         Body.freezeRotation = false;
         Body.angularVelocity = _deathSpin;
+
         Game.PlayerDefeated(this);
+
         StartCoroutine(DisableAfterDelay());
     }
-
-    protected override float GetHitProtection() => _hitProtection;
 
     private IEnumerator DisableAfterDelay()
     {

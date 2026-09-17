@@ -63,14 +63,41 @@ public sealed class EnemyController : Fighter, IPoolable
 
     protected override void OnBalloonLost()
     {
-        if (BalloonCount > 0) return;
+        if (BalloonCount > 0)
+        {
+            return;
+        }
+
+        Die();
+    }
+
+    protected override void OnFellIntoWater()
+    {
+        Die();
+    }
+
+    private void Die()
+    {
+        if (IsDead)
+        {
+            return;
+        }
+
         MarkDead();
+
         BodyCollider.enabled = false;
         Body.gravityScale = _deathGravity;
         Body.freezeRotation = false;
-        Body.angularVelocity = Random.Range(-_deathSpin, _deathSpin);
-        Body.AddForce(Vector2.up * _deathImpulse, ForceMode2D.Impulse);
+        Body.angularVelocity = Random.Range(
+            -_deathSpin,
+            _deathSpin);
+
+        Body.AddForce(
+            Vector2.up * _deathImpulse,
+            ForceMode2D.Impulse);
+
         Game.EnemyDefeated(this);
+
         StartCoroutine(ReturnAfterDelay());
     }
 

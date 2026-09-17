@@ -64,7 +64,15 @@ public abstract class Fighter : MonoBehaviour
         _invincibleUntil = Time.time + GetHitProtection();
         OnBalloonLost();
     }
+    internal void FallIntoWater()
+    {
+        if (_isDead)
+        {
+            return;
+        }
 
+        OnFellIntoWater();
+    }
     internal void SetInvincible(float duration) => _invincibleUntil = Mathf.Max(_invincibleUntil, Time.time + duration);
     protected void MarkDead() => _isDead = true;
 
@@ -77,5 +85,6 @@ public abstract class Fighter : MonoBehaviour
     }
 
     protected abstract void OnBalloonLost();
+    protected abstract void OnFellIntoWater();
     protected abstract float GetHitProtection();
 }
