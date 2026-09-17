@@ -39,10 +39,10 @@ internal sealed class FighterSpawner
 
     internal void SpawnPhase(int phase)
     {
-        int enemyCount = Mathf.Min(phase + _game.PhaseEnemyOffset, _game.EnemySpawns.Length);
+        int enemyCount = Mathf.Min(phase + _game.PhaseEnemyOffset, _game.EnemySpawnCount);
         for (int index = 0; index < enemyCount; index++)
         {
-            EnemyController enemy = _enemyPool.Get(_game.EnemySpawns[index]);
+            EnemyController enemy = _enemyPool.Get(_game.GetEnemySpawn(index));
             enemy.Initialize(_game);
             _enemies.Add(enemy);
         }

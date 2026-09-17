@@ -16,12 +16,14 @@ public sealed class GameManager : MonoBehaviour
     [SerializeField] private Camera _gameCamera;
     [SerializeField] private int _phaseEnemyOffset = 2;
     [SerializeField] private int _enemyPoolCapacity = 5;
-    [SerializeField] private Vector2[] _playerSpawns = { new(-1f, -3.35f), new(1f, -3.35f) };
-    [SerializeField] private Vector2[] _enemySpawns =
-    {
-        new(-4.7f, 0.2f), new(4.7f, 0.45f), new(-1.8f, 2.7f), new(1.9f, 3f), new(0f, 0.65f)
-    };
+    
+    [Header("플레이어 스폰 위치")]
+    [SerializeField] private Transform _playerOneSpawn;
+    [SerializeField] private Transform _playerTwoSpawn;
 
+    [Header("적 스폰 위치")]
+    [SerializeField] private Transform[] _enemySpawnPoints;
+    
     [Header("선택 프리팹")]
     [SerializeField] private GameObject[] _playerPrefabs;
     [SerializeField] private GameObject[] _enemyPrefabs;
@@ -44,7 +46,7 @@ public sealed class GameManager : MonoBehaviour
     internal int EnemyScore => _enemyScore;
     internal int PhaseEnemyOffset => _phaseEnemyOffset;
     internal int EnemyPoolCapacity => _enemyPoolCapacity;
-    internal Vector2[] EnemySpawns => _enemySpawns;
+    internal int EnemySpawnCount => _enemySpawnPoints.Length;
 
     private void Awake()
     {
@@ -82,23 +84,30 @@ public sealed class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (!_gameStateManager.IsPlaying && _input.RestartPressed)
-        {
-            Restart();
-        }
-    }
-
-    private void OnGUI()
-    {
         if (_spawner == null)
         {
             return;
         }
 
-        _hud?.Draw(_gameStateManager.Score, _gameStateManager.Phase,
-            _gameStateManager.GetLives(PlayerNumber.One), _gameStateManager.GetLives(PlayerNumber.Two),
-            _spawner.ActiveEnemyCount, _gameStateManager.IsChangingPhase,
-            _gameStateManager.IsGameOver, _gameStateManager.IsAllClear, _input);
+        UpdateHud();
+
+        if (!_gameStateManager.IsPlaying && _input.RestartPressed)
+        {
+            Restart();
+        }
+    }
+    private void UpdateHud()
+    {
+        _hud.Refresh(
+            _gameStateManager.Score,
+            _gameStateManager.Phase,
+            _gameStateManager.GetLives(PlayerNumber.One),
+            _gameStateManager.GetLives(PlayerNumber.Two),
+            _spawner.ActiveEnemyCount,
+            _gameStateManager.IsChangingPhase,
+            _gameStateManager.IsGameOver,
+            _gameStateManager.IsAllClear,
+            _input);
     }
 
     private void OnDestroy()
@@ -109,7 +118,18 @@ public sealed class GameManager : MonoBehaviour
 
     internal void BalloonPopped(Vector3 position) => _popPool?.Play(position);
     internal PlayerController GetNearestPlayer(Vector3 position) => _spawner.GetNearestPlayer(position);
-    internal Vector2 GetPlayerSpawn(PlayerNumber playerNumber) => _playerSpawns[(int)playerNumber];
+    
+    internal Vector2 GetPlayerSpawn(PlayerNumber playerNumber)
+    {
+        return playerNumber == PlayerNumber.One
+            ? _playerOneSpawn.position
+            : _playerTwoSpawn.position;
+    }
+
+    internal Vector2 GetEnemySpawn(int index)
+    {
+        return _enemySpawnPoints[index].position;
+    }
 
     internal void EnemyDefeated(EnemyController enemy)
     {
@@ -132,13 +152,68 @@ public sealed class GameManager : MonoBehaviour
 
     private bool HasRequiredComponents()
     {
-        bool isReady = _input != null && _mapBoundary != null && _hud != null && _popEffect != null && _retroFactory != null;
-        if (!isReady)
+        bool hasComponents =
+            _input != null
+            && _mapBoundary != null
+            && _hud != null
+            && _popEffect != null
+            && _retroFactory != null;
+
+        if (!hasComponents)
         {
-            Debug.LogError("GameManager의 기능 컴포넌트 참조를 모두 연결해주세요.", this);
+            Debug.LogError(
+                "GameManager의 기능 컴포넌트 참조를 모두 연결해주세요.",
+                this);
         }
 
-        return isReady;
+        bool hasSpawnPoints = HasRequiredSpawnPoints();
+        bool isHudConfigured = _hud != null && _hud.IsConfigured;
+
+        if (_hud != null && !isHudConfigured)
+        {
+            Debug.LogError(
+                "BalloonHud의 UI 참조를 모두 연결해주세요.",
+                _hud);
+        }
+
+        return hasComponents && hasSpawnPoints && isHudConfigured;
+    }
+
+    private bool HasRequiredSpawnPoints()
+    {
+        if (_playerOneSpawn == null || _playerTwoSpawn == null)
+        {
+            Debug.LogError(
+                "GameManager에 P1Spawn과 P2Spawn을 연결해주세요.",
+                this);
+
+            return false;
+        }
+
+        if (_enemySpawnPoints == null || _enemySpawnPoints.Length == 0)
+        {
+            Debug.LogError(
+                "GameManager에 적 스폰 위치를 한 개 이상 연결해주세요.",
+                this);
+
+            return false;
+        }
+
+        for (int index = 0; index < _enemySpawnPoints.Length; index++)
+        {
+            if (_enemySpawnPoints[index] != null)
+            {
+                continue;
+            }
+
+            Debug.LogError(
+                $"Enemy Spawn Points의 {index}번 항목이 비어 있습니다.",
+                this);
+
+            return false;
+        }
+
+        return true;
     }
 
     private IEnumerator NextPhase()
