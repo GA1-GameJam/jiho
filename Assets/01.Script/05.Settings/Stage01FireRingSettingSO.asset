@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FireRingSettingSO
   _spawnInterval: 3
   _spawnDistance: 10
-  _spawnHeight: 0
+  _spawnHeight: 1
