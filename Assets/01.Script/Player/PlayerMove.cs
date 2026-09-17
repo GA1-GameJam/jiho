@@ -2,7 +2,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerMove : MonoBehaviour
 {
     [Header("이동")]
@@ -19,10 +18,10 @@ public class PlayerMove : MonoBehaviour
 
     private Rigidbody2D _rigid;
     private Animator _animator;
-    private SpriteRenderer _spriteRenderer;
     private float _moveInput;
     private bool _jumpRequested;
     private bool _isGrounded;
+    private bool _isInputEnabled = true;
 
     public float MoveInput => _moveInput;
     public bool IsGrounded => _isGrounded;
@@ -31,13 +30,21 @@ public class PlayerMove : MonoBehaviour
     {
         _rigid = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        GetMoveInput();
-        RequestJump();
+        if (_isInputEnabled)
+        {
+            GetMoveInput();
+            RequestJump();
+        }
+        else
+        {
+            _moveInput = 0f;
+            _jumpRequested = false;
+        }
+
         UpdateAnimation();
     }
 
@@ -46,6 +53,13 @@ public class PlayerMove : MonoBehaviour
         CheckGround();
         Jump();
         Move();
+    }
+
+    public void SetInputEnabled(bool isInputEnabled)
+    {
+        _isInputEnabled = isInputEnabled;
+        _moveInput = 0f;
+        _jumpRequested = false;
     }
 
     private void GetMoveInput()
@@ -73,11 +87,7 @@ public class PlayerMove : MonoBehaviour
 
     private void CheckGround()
     {
-        bool isTouchingGround = Physics2D.OverlapCircle(
-            _groundCheck.position,
-            _groundCheckRadius,
-            _groundLayer) != null;
-
+        bool isTouchingGround = Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer) != null;
         _isGrounded = isTouchingGround && _rigid.linearVelocity.y <= 0.01f;
     }
 
@@ -89,6 +99,7 @@ public class PlayerMove : MonoBehaviour
             velocity.y = _jumpSpeed;
             _rigid.linearVelocity = velocity;
             _isGrounded = false;
+
             _animator.SetBool("IsGrounded", false);
             _animator.SetTrigger("Jump");
         }
@@ -103,15 +114,6 @@ public class PlayerMove : MonoBehaviour
         Vector2 velocity = _rigid.linearVelocity;
         velocity.x = _moveInput * speed;
         _rigid.linearVelocity = velocity;
-
-        if (_moveInput < 0f)
-        {
-            _spriteRenderer.flipX = true;
-        }
-        else if (_moveInput > 0f)
-        {
-            _spriteRenderer.flipX = false;
-        }
     }
 
     private void UpdateAnimation()

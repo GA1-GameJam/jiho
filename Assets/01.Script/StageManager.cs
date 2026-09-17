@@ -10,12 +10,18 @@ public class StageManager : MonoBehaviour
     [Header("스테이지 설정")]
     [SerializeField] private StageSettingSO _stageSettings;
 
+    [Header("시작 안내")]
+    [SerializeField] private GameObject _startPanel;
+
     [Header("클리어")]
     [SerializeField] private GameObject _clearPanel;
 
+    private PlayerMove _playerMove;
+    private Rigidbody2D _playerRigid;
     private float _startPositionX;
     private float _remainingDistance;
     private float _obstacleSpeed;
+    private bool _hasStarted;
     private bool _isPlaying;
     private bool _hasReachedEnd;
     private bool _isCleared;
@@ -35,10 +41,24 @@ public class StageManager : MonoBehaviour
             return;
         }
 
-        _startPositionX = _player.position.x;
+        _playerMove = _player.GetComponent<PlayerMove>();
+        _playerRigid = _player.GetComponent<Rigidbody2D>();
+
+        if (_playerMove == null || _playerRigid == null)
+        {
+            Debug.LogError("연결한 Player에 PlayerMove와 Rigidbody2D가 필요합니다.", this);
+            enabled = false;
+            return;
+        }
+
         _remainingDistance = _stageSettings.StageDistance;
         _obstacleSpeed = _stageSettings.BaseObstacleSpeed;
-        _isPlaying = true;
+        _playerMove.SetInputEnabled(false);
+
+        if (_startPanel != null)
+        {
+            _startPanel.SetActive(true);
+        }
 
         if (_clearPanel != null)
         {
@@ -48,6 +68,16 @@ public class StageManager : MonoBehaviour
 
     private void Update()
     {
+        if (!_hasStarted)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                StartStage();
+            }
+
+            return;
+        }
+
         if (_isCleared)
         {
             if (Input.GetKeyDown(KeyCode.Return))
@@ -71,6 +101,28 @@ public class StageManager : MonoBehaviour
             _hasReachedEnd = true;
             Debug.Log("목표 거리 도달! 장애물 생성을 종료합니다.");
         }
+    }
+
+    public void StartStage()
+    {
+        if (_hasStarted || _stageSettings == null || _playerMove == null || _playerRigid == null)
+        {
+            return;
+        }
+
+        _startPositionX = _player.position.x;
+        _remainingDistance = _stageSettings.StageDistance;
+        _obstacleSpeed = _stageSettings.BaseObstacleSpeed;
+        _hasStarted = true;
+        _isPlaying = true;
+        _playerMove.SetInputEnabled(true);
+
+        if (_startPanel != null)
+        {
+            _startPanel.SetActive(false);
+        }
+
+        Debug.Log("공연 시작!");
     }
 
     public void SetSpeedMultiplier(float multiplier)
@@ -112,12 +164,7 @@ public class StageManager : MonoBehaviour
         _hasReachedEnd = true;
         _remainingDistance = 0f;
 
-        PlayerMove playerMove = _player.GetComponent<PlayerMove>();
-        Rigidbody2D rigid = _player.GetComponent<Rigidbody2D>();
-
-        playerMove.enabled = false;
-        rigid.linearVelocity = Vector2.zero;
-        rigid.simulated = false;
+        StopPlayer();
 
         if (_clearPanel != null)
         {
@@ -158,8 +205,18 @@ public class StageManager : MonoBehaviour
         }
 
         _isPlaying = false;
+        StopPlayer();
+
         Debug.Log("공연 실패! 잠시 후 다시 시작합니다.");
         StartCoroutine(RestartStage());
+    }
+
+    private void StopPlayer()
+    {
+        _playerMove.SetInputEnabled(false);
+        _playerMove.enabled = false;
+        _playerRigid.linearVelocity = Vector2.zero;
+        _playerRigid.simulated = false;
     }
 
     private IEnumerator RestartStage()
