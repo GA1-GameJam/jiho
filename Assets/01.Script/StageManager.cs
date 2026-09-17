@@ -6,13 +6,10 @@ public class StageManager : MonoBehaviour
 {
     [Header("플레이어")]
     [SerializeField] private Transform _player;
-
     [Header("스테이지 설정")]
     [SerializeField] private StageSettingSO _stageSettings;
-
     [Header("시작 안내")]
     [SerializeField] private GameObject _startPanel;
-
     [Header("클리어")]
     [SerializeField] private GameObject _clearPanel;
 
@@ -25,18 +22,22 @@ public class StageManager : MonoBehaviour
     private bool _isPlaying;
     private bool _hasReachedEnd;
     private bool _isCleared;
+    private bool _isRecovering;
 
     public Transform Player => _player;
     public float RemainingDistance => _remainingDistance;
     public float ObstacleSpeed => _obstacleSpeed;
     public bool IsPlaying => _isPlaying;
     public bool HasReachedEnd => _hasReachedEnd;
+    public bool IsRecovering => _isRecovering;
 
     private void Awake()
     {
         if (_stageSettings == null || _player == null)
         {
-            Debug.LogError("StageManager의 Stage Settings와 Player를 연결하세요.", this);
+            Debug.LogError(
+                "StageManager의 Stage Settings와 Player를 연결하세요.",
+                this);
             enabled = false;
             return;
         }
@@ -46,7 +47,9 @@ public class StageManager : MonoBehaviour
 
         if (_playerMove == null || _playerRigid == null)
         {
-            Debug.LogError("연결한 Player에 PlayerMove와 Rigidbody2D가 필요합니다.", this);
+            Debug.LogError(
+                "연결한 Player에 PlayerMove와 Rigidbody2D가 필요합니다.",
+                this);
             enabled = false;
             return;
         }
@@ -88,13 +91,16 @@ public class StageManager : MonoBehaviour
             return;
         }
 
-        if (!_isPlaying || _hasReachedEnd)
+        if (!_isPlaying || _hasReachedEnd || _isRecovering)
         {
             return;
         }
 
         float travelDistance = _player.position.x - _startPositionX;
-        _remainingDistance = Mathf.Clamp(_stageSettings.StageDistance - travelDistance, 0f, _stageSettings.StageDistance);
+        _remainingDistance = Mathf.Clamp(
+            _stageSettings.StageDistance - travelDistance,
+            0f,
+            _stageSettings.StageDistance);
 
         if (_remainingDistance <= 0f)
         {
@@ -103,9 +109,15 @@ public class StageManager : MonoBehaviour
         }
     }
 
+    public void SetRecovering(bool value)
+    {
+        _isRecovering = value;
+    }
+
     public void StartStage()
     {
-        if (_hasStarted || _stageSettings == null || _playerMove == null || _playerRigid == null)
+        if (_hasStarted || _stageSettings == null ||
+            _playerMove == null || _playerRigid == null)
         {
             return;
         }
@@ -132,7 +144,8 @@ public class StageManager : MonoBehaviour
             return;
         }
 
-        _obstacleSpeed = _stageSettings.BaseObstacleSpeed * Mathf.Max(1f, multiplier);
+        _obstacleSpeed =
+            _stageSettings.BaseObstacleSpeed * Mathf.Max(1f, multiplier);
     }
 
     public void ResetSpeed()
@@ -147,7 +160,7 @@ public class StageManager : MonoBehaviour
 
     public void ClearStage()
     {
-        if (!_isPlaying)
+        if (!_isPlaying || _isRecovering)
         {
             return;
         }
@@ -189,7 +202,8 @@ public class StageManager : MonoBehaviour
 
         if (!Application.CanStreamedLevelBeLoaded(_stageSettings.NextSceneName))
         {
-            Debug.LogWarning("다음 스테이지 이름과 Build Profiles의 Scene List를 확인하세요.");
+            Debug.LogWarning(
+                "다음 스테이지 이름과 Build Profiles의 Scene List를 확인하세요.");
             return;
         }
 
@@ -213,6 +227,14 @@ public class StageManager : MonoBehaviour
 
     private void StopPlayer()
     {
+        PlayerToeCurl toeCurl = _player.GetComponent<PlayerToeCurl>();
+
+        if (toeCurl != null)
+        {
+            toeCurl.CancelRecovery();
+        }
+
+        _isRecovering = false;
         _playerMove.SetInputEnabled(false);
         _playerMove.enabled = false;
         _playerRigid.linearVelocity = Vector2.zero;

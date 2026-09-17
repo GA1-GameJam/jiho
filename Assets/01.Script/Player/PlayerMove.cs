@@ -7,10 +7,8 @@ public class PlayerMove : MonoBehaviour
     [Header("이동")]
     [SerializeField] private float _moveSpeed = 4f;
     [SerializeField] private float _airMoveSpeed = 4f;
-
     [Header("점프")]
     [SerializeField] private float _jumpSpeed = 8f;
-
     [Header("바닥 확인")]
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private float _groundCheckRadius = 0.1f;
@@ -22,8 +20,10 @@ public class PlayerMove : MonoBehaviour
     private bool _jumpRequested;
     private bool _isGrounded;
     private bool _isInputEnabled = true;
+    private int _inputResumeFrame = -1;
 
     public float MoveInput => _moveInput;
+    public bool IsInputEnabled => _isInputEnabled;
     public bool IsGrounded => _isGrounded;
 
     private void Awake()
@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (_isInputEnabled)
+        if (_isInputEnabled && Time.frameCount > _inputResumeFrame)
         {
             GetMoveInput();
             RequestJump();
@@ -58,6 +58,7 @@ public class PlayerMove : MonoBehaviour
     public void SetInputEnabled(bool isInputEnabled)
     {
         _isInputEnabled = isInputEnabled;
+        _inputResumeFrame = Time.frameCount;
         _moveInput = 0f;
         _jumpRequested = false;
     }
@@ -87,8 +88,13 @@ public class PlayerMove : MonoBehaviour
 
     private void CheckGround()
     {
-        bool isTouchingGround = Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _groundLayer) != null;
-        _isGrounded = isTouchingGround && _rigid.linearVelocity.y <= 0.01f;
+        bool isTouchingGround = Physics2D.OverlapCircle(
+            _groundCheck.position,
+            _groundCheckRadius,
+            _groundLayer) != null;
+
+        _isGrounded = isTouchingGround &&
+                      _rigid.linearVelocity.y <= 0.01f;
     }
 
     private void Jump()
@@ -110,7 +116,6 @@ public class PlayerMove : MonoBehaviour
     private void Move()
     {
         float speed = _isGrounded ? _moveSpeed : _airMoveSpeed;
-
         Vector2 velocity = _rigid.linearVelocity;
         velocity.x = _moveInput * speed;
         _rigid.linearVelocity = velocity;
@@ -119,7 +124,6 @@ public class PlayerMove : MonoBehaviour
     private void UpdateAnimation()
     {
         bool isRunning = Mathf.Abs(_moveInput) > 0.01f;
-
         _animator.SetBool("IsRunning", isRunning);
         _animator.SetBool("IsGrounded", _isGrounded);
     }
