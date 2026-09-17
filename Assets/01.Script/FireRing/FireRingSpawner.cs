@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class FireRingSpawner : MonoBehaviour
 {
+    [Header("연결")]
     [SerializeField] private StageManager _stageManager;
     [SerializeField] private FireRingPool _pool;
 
-    [Header("등장 설정")]
-    [SerializeField] private float _spawnInterval = 3f;
-    [SerializeField] private float _spawnDistance = 10f;
-    [SerializeField] private float _spawnHeight = 0f;
+    [Header("불고리 설정")]
+    [SerializeField] private FireRingSettingSO _fireRingSettings;
 
     private float _spawnTimer;
+
+    private void Awake()
+    {
+        if (_stageManager == null || _pool == null || _fireRingSettings == null)
+        {
+            Debug.LogError("FireRingSpawner의 Stage Manager, Pool, Fire Ring Settings를 연결하세요.", this);
+            enabled = false;
+            return;
+        }
+    }
 
     private void Update()
     {
@@ -21,7 +30,7 @@ public class FireRingSpawner : MonoBehaviour
 
         _spawnTimer += Time.deltaTime;
 
-        if (_spawnTimer < _spawnInterval)
+        if (_spawnTimer < _fireRingSettings.SpawnInterval)
         {
             return;
         }
@@ -32,8 +41,8 @@ public class FireRingSpawner : MonoBehaviour
 
     private void SpawnRing()
     {
-        float positionX = _stageManager.Player.position.x + _spawnDistance;
-        Vector3 position = new Vector3(positionX, _spawnHeight, 0f);
+        float positionX = _stageManager.Player.position.x + _fireRingSettings.SpawnDistance;
+        Vector3 position = new Vector3(positionX, _fireRingSettings.SpawnHeight, 0f);
 
         _pool.GetRing(position);
     }

@@ -1409,9 +1409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FireRingSpawner
   _stageManager: {fileID: 1877201512}
   _pool: {fileID: 925320288}
-  _spawnInterval: 3
-  _spawnDistance: 10
-  _spawnHeight: 0
+  _fireRingSettings: {fileID: 11400000, guid: c32b2988ff96a5f4884a6d6033855d77, type: 2}
 --- !u!4 &1151055548
 Transform:
   m_ObjectHideFlags: 0
