@@ -7,14 +7,11 @@ public class StageManager : MonoBehaviour
     [Header("플레이어")]
     [SerializeField] private Transform _player;
 
-    [Header("공연 설정")]
-    [SerializeField] private float _stageDistance = 100f;
-    [SerializeField] private float _baseObstacleSpeed = 2f;
-    [SerializeField] private float _restartDelay = 1f;
+    [Header("스테이지 설정")]
+    [SerializeField] private StageSettingSO _stageSettings;
 
     [Header("클리어")]
     [SerializeField] private GameObject _clearPanel;
-    [SerializeField] private string _nextSceneName;
 
     private float _startPositionX;
     private float _remainingDistance;
@@ -31,9 +28,16 @@ public class StageManager : MonoBehaviour
 
     private void Awake()
     {
+        if (_stageSettings == null || _player == null)
+        {
+            Debug.LogError("StageManager의 Stage Settings와 Player를 연결하세요.", this);
+            enabled = false;
+            return;
+        }
+
         _startPositionX = _player.position.x;
-        _remainingDistance = _stageDistance;
-        _obstacleSpeed = _baseObstacleSpeed;
+        _remainingDistance = _stageSettings.StageDistance;
+        _obstacleSpeed = _stageSettings.BaseObstacleSpeed;
         _isPlaying = true;
 
         if (_clearPanel != null)
@@ -60,23 +64,33 @@ public class StageManager : MonoBehaviour
         }
 
         float travelDistance = _player.position.x - _startPositionX;
-        _remainingDistance = Mathf.Clamp(_stageDistance - travelDistance, 0f, _stageDistance);
+        _remainingDistance = Mathf.Clamp(_stageSettings.StageDistance - travelDistance, 0f, _stageSettings.StageDistance);
 
         if (_remainingDistance <= 0f)
         {
             _hasReachedEnd = true;
-            Debug.Log("목표 거리 도달! 불고리 생성을 종료합니다.");
+            Debug.Log("목표 거리 도달! 장애물 생성을 종료합니다.");
         }
     }
 
     public void SetSpeedMultiplier(float multiplier)
     {
-        _obstacleSpeed = _baseObstacleSpeed * Mathf.Max(1f, multiplier);
+        if (_stageSettings == null)
+        {
+            return;
+        }
+
+        _obstacleSpeed = _stageSettings.BaseObstacleSpeed * Mathf.Max(1f, multiplier);
     }
 
     public void ResetSpeed()
     {
-        _obstacleSpeed = _baseObstacleSpeed;
+        if (_stageSettings == null)
+        {
+            return;
+        }
+
+        _obstacleSpeed = _stageSettings.BaseObstacleSpeed;
     }
 
     public void ClearStage()
@@ -88,7 +102,7 @@ public class StageManager : MonoBehaviour
 
         float travelDistance = _player.position.x - _startPositionX;
 
-        if (travelDistance < _stageDistance)
+        if (travelDistance < _stageSettings.StageDistance)
         {
             return;
         }
@@ -120,20 +134,20 @@ public class StageManager : MonoBehaviour
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(_nextSceneName))
+        if (string.IsNullOrWhiteSpace(_stageSettings.NextSceneName))
         {
             Debug.Log("다음 스테이지가 아직 설정되지 않았습니다.");
             return;
         }
 
-        if (!Application.CanStreamedLevelBeLoaded(_nextSceneName))
+        if (!Application.CanStreamedLevelBeLoaded(_stageSettings.NextSceneName))
         {
             Debug.LogWarning("다음 스테이지 이름과 Build Profiles의 Scene List를 확인하세요.");
             return;
         }
 
         Time.timeScale = 1f;
-        SceneManager.LoadScene(_nextSceneName);
+        SceneManager.LoadScene(_stageSettings.NextSceneName);
     }
 
     public void FailStage()
@@ -150,7 +164,7 @@ public class StageManager : MonoBehaviour
 
     private IEnumerator RestartStage()
     {
-        yield return new WaitForSecondsRealtime(_restartDelay);
+        yield return new WaitForSecondsRealtime(_stageSettings.RestartDelay);
 
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
