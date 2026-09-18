@@ -1,8 +1,27 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public sealed class PlayerController : Fighter
 {
+    private static readonly int _isGroundedHash =
+        Animator.StringToHash("IsGrounded");
+
+    private static readonly int _speedHash =
+        Animator.StringToHash("Speed");
+
+    private static readonly int _flapHash =
+        Animator.StringToHash("Flap");
+
+    private static readonly int _fallHash =
+        Animator.StringToHash("Fall");
+
+    private static readonly int _dieHash =
+        Animator.StringToHash("Die");
+
+    private static readonly int _refillHash =
+        Animator.StringToHash("Refill");
+
     [Header("플레이어 이동")]
     [SerializeField] private int _balloonLimit = 2;
     [SerializeField] private float _gravityScale = 0.78f;
@@ -26,8 +45,13 @@ public sealed class PlayerController : Fighter
     [SerializeField] private float _visualTiltMultiplier = 2.5f;
     [SerializeField] private float _maximumVisualTilt = 14f;
 
+    private readonly HashSet<Collider2D> _groundColliders =
+        new();
+
     private bool _isGrounded;
     private Transform _visual;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
     private PlayerNumber _playerNumber;
 
     internal int BalloonLimit => _balloonLimit;
@@ -45,10 +69,29 @@ public sealed class PlayerController : Fighter
         Initialize(game, _balloonLimit);
 
         _visual = transform.Find("Visual");
+
+        if (_visual == null)
+        {
+            Debug.LogError(
+                $"{name} 아래에 Visual 오브젝트가 없습니다.",
+                this);
+        }
+        else
+        {
+            _animator =
+                _visual.GetComponent<Animator>();
+
+            _spriteRenderer =
+                _visual.GetComponent<SpriteRenderer>();
+        }
+
+        _groundColliders.Clear();
         _isGrounded = false;
 
         Body.gravityScale = _gravityScale;
         Body.linearDamping = _airDamping;
+
+        ResetAnimator();
     }
 
     private void Update()
@@ -69,6 +112,11 @@ public sealed class PlayerController : Fighter
         else
         {
             Game.PlayFlapSound();
+        }
+
+        if (_animator != null)
+        {
+            _animator.SetTrigger(_flapHash);
         }
 
         float flapForce =
@@ -116,12 +164,16 @@ public sealed class PlayerController : Fighter
         Game.ClampVertical(transform, Body);
         Game.Wrap(transform);
 
+        UpdateFacing(horizontalInput);
+        UpdateAnimation(horizontalInput);
         UpdateVisualTilt();
     }
 
     private void OnCollisionStay2D(
         Collision2D collision)
     {
+        bool hasGroundContact = false;
+
         for (int index = 0;
              index < collision.contactCount;
              index++)
@@ -131,16 +183,34 @@ public sealed class PlayerController : Fighter
                 .normal.y
                 > _groundNormalThreshold)
             {
-                _isGrounded = true;
-                return;
+                hasGroundContact = true;
+                break;
             }
         }
+
+        if (hasGroundContact)
+        {
+            _groundColliders.Add(
+                collision.collider);
+        }
+        else
+        {
+            _groundColliders.Remove(
+                collision.collider);
+        }
+
+        _isGrounded =
+            _groundColliders.Count > 0;
     }
 
     private void OnCollisionExit2D(
         Collision2D collision)
     {
-        _isGrounded = false;
+        _groundColliders.Remove(
+            collision.collider);
+
+        _isGrounded =
+            _groundColliders.Count > 0;
     }
 
     protected override void OnBalloonLost()
@@ -163,10 +233,8 @@ public sealed class PlayerController : Fighter
         Die(false);
     }
 
-    protected override float GetHitProtection()
-    {
-        return _hitProtection;
-    }
+    protected override float GetHitProtection() =>
+        _hitProtection;
 
     private void Die(bool playKillSound)
     {
@@ -176,6 +244,16 @@ public sealed class PlayerController : Fighter
         }
 
         MarkDead();
+
+        if (_animator != null)
+        {
+            _animator.ResetTrigger(_flapHash);
+
+            _animator.SetTrigger(
+                playKillSound
+                    ? _fallHash
+                    : _dieHash);
+        }
 
         BodyCollider.enabled = false;
         Body.gravityScale = _deathGravity;
@@ -200,6 +278,60 @@ public sealed class PlayerController : Fighter
         }
 
         gameObject.SetActive(false);
+    }
+
+    private void ResetAnimator()
+    {
+        if (_animator == null)
+        {
+            return;
+        }
+
+        _animator.Rebind();
+        _animator.Update(0f);
+
+        _animator.SetBool(
+            _isGroundedHash,
+            false);
+
+        _animator.SetFloat(
+            _speedHash,
+            0f);
+
+        _animator.SetTrigger(
+            _refillHash);
+    }
+
+    private void UpdateAnimation(
+        float horizontalInput)
+    {
+        if (_animator == null)
+        {
+            return;
+        }
+
+        _animator.SetBool(
+            _isGroundedHash,
+            _isGrounded);
+
+        _animator.SetFloat(
+            _speedHash,
+            Mathf.Abs(horizontalInput));
+    }
+
+    private void UpdateFacing(
+        float horizontalInput)
+    {
+        if (_spriteRenderer == null
+            || Mathf.Approximately(
+                horizontalInput,
+                0f))
+        {
+            return;
+        }
+
+        _spriteRenderer.flipX =
+            horizontalInput < 0f;
     }
 
     private void UpdateVisualTilt()
