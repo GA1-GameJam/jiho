@@ -4,11 +4,18 @@ using UnityEngine;
 public abstract class Fighter : MonoBehaviour
 {
     [Header("공통 물리")]
-    [SerializeField] private Vector2 _bodySize = new(0.58f, 0.78f);
-    [SerializeField] private Vector2 _bodyOffset = new(0f, -0.05f);
-    [SerializeField] private float _initialDamping = 0.1f;
+    [SerializeField] private Vector2 _bodySize =
+        new(0.58f, 0.78f);
 
-    private readonly List<BalloonHitTarget> _balloons = new();
+    [SerializeField] private Vector2 _bodyOffset =
+        new(0f, -0.05f);
+
+    [SerializeField] private float _initialDamping =
+        0.1f;
+
+    private readonly List<BalloonHitTarget> _balloons =
+        new();
+
     private float _invincibleUntil;
     private int _balloonCount;
     private bool _isDead;
@@ -22,13 +29,19 @@ public abstract class Fighter : MonoBehaviour
     protected int BalloonCount => _balloonCount;
     protected bool IsDead => _isDead;
 
-    internal void Initialize(GameManager game, int balloonCount)
+    internal void Initialize(
+        GameManager game,
+        int balloonCount)
     {
         StopAllCoroutines();
+
         _game = game;
         _body = GetComponent<Rigidbody2D>();
         _bodyCollider = GetComponent<Collider2D>();
-        GetComponent<FighterBody>().SetOwner(this);
+
+        GetComponent<FighterBody>()
+            .SetOwner(this);
+
         if (_bodyCollider is CapsuleCollider2D capsule)
         {
             capsule.size = _bodySize;
@@ -37,25 +50,62 @@ public abstract class Fighter : MonoBehaviour
 
         _isDead = false;
         _invincibleUntil = 0f;
+
         _balloons.Clear();
-        _balloons.AddRange(GetComponentsInChildren<BalloonHitTarget>(true));
-        _balloonCount = Mathf.Min(balloonCount, _balloons.Count);
+
+        _balloons.AddRange(
+            GetComponentsInChildren<BalloonHitTarget>(true));
+
+        if (_balloons.Count == 0)
+        {
+            _balloonCount = 0;
+        }
+        else if (_balloons.Count == 1)
+        {
+            // 통짜 BalloonHitbox 하나로 풍선 여러 개를 처리한다.
+            _balloonCount = Mathf.Max(0, balloonCount);
+        }
+        else
+        {
+            // 기존처럼 풍선마다 판정이 따로 있는 적도 지원한다.
+            _balloonCount = Mathf.Min(
+                balloonCount,
+                _balloons.Count);
+        }
+
         _bodyCollider.enabled = true;
         _body.freezeRotation = true;
         _body.angularVelocity = 0f;
         _body.linearVelocity = Vector2.zero;
         _body.linearDamping = _initialDamping;
         _body.rotation = 0f;
+
         transform.rotation = Quaternion.identity;
 
-        for (int index = 0; index < _balloons.Count; index++)
+        bool usesSharedHitbox =
+            _balloons.Count == 1;
+
+        for (int index = 0;
+             index < _balloons.Count;
+             index++)
         {
-            _balloons[index].SetOwner(this);
-            _balloons[index].gameObject.SetActive(index < _balloonCount);
+            BalloonHitTarget balloon =
+                _balloons[index];
+
+            balloon.SetOwner(this);
+
+            bool shouldBeActive =
+                usesSharedHitbox
+                    ? _balloonCount > 0
+                    : index < _balloonCount;
+
+            balloon.gameObject.SetActive(
+                shouldBeActive);
         }
     }
 
-    internal void PopBalloon(BalloonHitTarget target)
+    internal void PopBalloon(
+        BalloonHitTarget target)
     {
         if (_isDead
             || target == null
@@ -65,11 +115,26 @@ public abstract class Fighter : MonoBehaviour
             return;
         }
 
-        Game.BalloonPopped(target.transform.position);
+        Game.BalloonPopped(
+            target.transform.position);
 
-        target.gameObject.SetActive(false);
+        bool usesSharedHitbox =
+            _balloons.Count == 1;
 
-        _balloonCount = Mathf.Max(0, _balloonCount - 1);
+        if (!usesSharedHitbox)
+        {
+            target.gameObject.SetActive(false);
+        }
+
+        _balloonCount = Mathf.Max(
+            0,
+            _balloonCount - 1);
+
+        if (usesSharedHitbox
+            && _balloonCount <= 0)
+        {
+            target.gameObject.SetActive(false);
+        }
 
         if (_balloonCount <= 0)
         {
@@ -81,6 +146,7 @@ public abstract class Fighter : MonoBehaviour
 
         OnBalloonLost();
     }
+
     internal void FallIntoWater()
     {
         if (_isDead)
@@ -90,14 +156,34 @@ public abstract class Fighter : MonoBehaviour
 
         OnFellIntoWater();
     }
-    internal void SetInvincible(float duration) => _invincibleUntil = Mathf.Max(_invincibleUntil, Time.time + duration);
-    protected void MarkDead() => _isDead = true;
+
+    internal void SetInvincible(float duration)
+    {
+        _invincibleUntil = Mathf.Max(
+            _invincibleUntil,
+            Time.time + duration);
+    }
+
+    protected void MarkDead()
+    {
+        _isDead = true;
+    }
 
     protected void ClampVelocity(Vector3 limits)
     {
-        Vector2 velocity = Body.linearVelocity;
-        velocity.x = Mathf.Clamp(velocity.x, -limits.x, limits.x);
-        velocity.y = Mathf.Clamp(velocity.y, -limits.z, limits.y);
+        Vector2 velocity =
+            Body.linearVelocity;
+
+        velocity.x = Mathf.Clamp(
+            velocity.x,
+            -limits.x,
+            limits.x);
+
+        velocity.y = Mathf.Clamp(
+            velocity.y,
+            -limits.z,
+            limits.y);
+
         Body.linearVelocity = velocity;
     }
 

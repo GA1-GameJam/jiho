@@ -52,6 +52,7 @@ public sealed class PlayerController : Fighter
     private Transform _visual;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    private BalloonVisual _balloonVisual;
     private PlayerNumber _playerNumber;
 
     internal int BalloonLimit => _balloonLimit;
@@ -84,6 +85,8 @@ public sealed class PlayerController : Fighter
             _spriteRenderer =
                 _visual.GetComponent<SpriteRenderer>();
         }
+        _balloonVisual =
+            GetComponentInChildren<BalloonVisual>(true);
 
         _groundColliders.Clear();
         _isGrounded = false;
@@ -212,20 +215,7 @@ public sealed class PlayerController : Fighter
         _isGrounded =
             _groundColliders.Count > 0;
     }
-
-    protected override void OnBalloonLost()
-    {
-        Body.AddForce(
-            Vector2.down * _balloonLossImpulse,
-            ForceMode2D.Impulse);
-
-        if (BalloonCount > 0)
-        {
-            return;
-        }
-
-        Die(true);
-    }
+    
 
     protected override void OnFellIntoWater()
     {
@@ -330,8 +320,17 @@ public sealed class PlayerController : Fighter
             return;
         }
 
-        _spriteRenderer.flipX =
+        bool flipX =
             horizontalInput < 0f;
+
+        _spriteRenderer.flipX =
+            flipX;
+
+        if (_balloonVisual != null)
+        {
+            _balloonVisual.SetFacing(
+                flipX);
+        }
     }
 
     private void UpdateVisualTilt()

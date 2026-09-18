@@ -1,0 +1,1368 @@
+fileFormatVersion: 2
+guid: d5ed31f1b96d35b468c3fcad625e8ff2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2191008936306186442
+    second: balloon-fighter-blue-Photoroom_0
+  - first:
+      213: 3929339546620651083
+    second: balloon-fighter-blue-Photoroom_1
+  - first:
+      213: 7072106772517788727
+    second: balloon-fighter-blue-Photoroom_2
+  - first:
+      213: 7014609763758887653
+    second: balloon-fighter-blue-Photoroom_3
+  - first:
+      213: 3145631655635804849
+    second: balloon-fighter-blue-Photoroom_4
+  - first:
+      213: 9017329726367231571
+    second: balloon-fighter-blue-Photoroom_5
+  - first:
+      213: -3196363944993455774
+    second: balloon-fighter-blue-Photoroom_6
+  - first:
+      213: 3458921185031311128
+    second: balloon-fighter-blue-Photoroom_7
+  - first:
+      213: -6286359127319707133
+    second: balloon-fighter-blue-Photoroom_8
+  - first:
+      213: -3246204715116878048
+    second: balloon-fighter-blue-Photoroom_9
+  - first:
+      213: -1669845443970682147
+    second: balloon-fighter-blue-Photoroom_10
+  - first:
+      213: -2898845711152467110
+    second: balloon-fighter-blue-Photoroom_11
+  - first:
+      213: 7219457702597761271
+    second: balloon-fighter-blue-Photoroom_12
+  - first:
+      213: -5425996145668242500
+    second: balloon-fighter-blue-Photoroom_13
+  - first:
+      213: -8260022799656294379
+    second: balloon-fighter-blue-Photoroom_14
+  - first:
+      213: -9181504485300216892
+    second: balloon-fighter-blue-Photoroom_15
+  - first:
+      213: 8614707415486606057
+    second: balloon-fighter-blue-Photoroom_16
+  - first:
+      213: 2168825853152915710
+    second: balloon-fighter-blue-Photoroom_17
+  - first:
+      213: 3952320427641030949
+    second: balloon-fighter-blue-Photoroom_18
+  - first:
+      213: 4601604154244030708
+    second: balloon-fighter-blue-Photoroom_19
+  - first:
+      213: -894860071259168904
+    second: balloon-fighter-blue-Photoroom_20
+  - first:
+      213: 3531326690102692506
+    second: balloon-fighter-blue-Photoroom_21
+  - first:
+      213: 1216533537703533109
+    second: balloon-fighter-blue-Photoroom_22
+  - first:
+      213: -4028435340340975369
+    second: balloon-fighter-blue-Photoroom_23
+  - first:
+      213: 4162496256149757827
+    second: balloon-fighter-blue-Photoroom_24
+  - first:
+      213: 8664199582665478280
+    second: balloon-fighter-blue-Photoroom_25
+  - first:
+      213: 6438047784339065883
+    second: balloon-fighter-blue-Photoroom_26
+  - first:
+      213: 2804441288156207864
+    second: balloon-fighter-blue-Photoroom_27
+  - first:
+      213: -4620822625782470165
+    second: balloon-fighter-blue-Photoroom_28
+  - first:
+      213: 8538202937561385570
+    second: balloon-fighter-blue-Photoroom_29
+  - first:
+      213: 2259199823523370929
+    second: balloon-fighter-blue-Photoroom_30
+  - first:
+      213: -5952138695149752265
+    second: balloon-fighter-blue-Photoroom_31
+  - first:
+      213: -1232246976179884633
+    second: balloon-fighter-blue-Photoroom_32
+  - first:
+      213: 9020478670644736202
+    second: balloon-fighter-blue-Photoroom_33
+  - first:
+      213: 8015338446717424582
+    second: balloon-fighter-blue-Photoroom_34
+  - first:
+      213: 5843822284057917181
+    second: balloon-fighter-blue-Photoroom_35
+  - first:
+      213: -1573144444309461142
+    second: balloon-fighter-blue-Photoroom_36
+  - first:
+      213: 1469338058098406916
+    second: balloon-fighter-blue-Photoroom_37
+  - first:
+      213: -8420026911675627956
+    second: balloon-fighter-blue-Photoroom_38
+  - first:
+      213: 3924144507474624604
+    second: balloon-fighter-blue-Photoroom_39
+  - first:
+      213: 1806876300673169390
+    second: balloon-fighter-blue-Photoroom_40
+  - first:
+      213: 1772950711271234740
+    second: balloon-fighter-blue-Photoroom_41
+  - first:
+      213: 7886738445602581993
+    second: balloon-fighter-blue-Photoroom_42
+  - first:
+      213: 1370739539253567007
+    second: balloon-fighter-blue-Photoroom_43
+  - first:
+      213: -7977594692663846682
+    second: balloon-fighter-blue-Photoroom_44
+  - first:
+      213: 4401537948268761130
+    second: balloon-fighter-blue-Photoroom_45
+  - first:
+      213: 6462972655102631495
+    second: balloon-fighter-blue-Photoroom_46
+  - first:
+      213: 7735608526096113588
+    second: balloon-fighter-blue-Photoroom_47
+  - first:
+      213: -6527432921135675947
+    second: balloon-fighter-blue-Photoroom_48
+  - first:
+      213: 6980902650972547954
+    second: balloon-fighter-blue-Photoroom_49
+  - first:
+      213: -6433256517867977119
+    second: balloon-fighter-blue-Photoroom_50
+  - first:
+      213: 1372603034200334545
+    second: balloon-fighter-blue-Photoroom_51
+  - first:
+      213: -782788502084768446
+    second: balloon-fighter-blue-Photoroom_52
+  - first:
+      213: -5293296220249614132
+    second: balloon-fighter-blue-Photoroom_53
+  - first:
+      213: -4391019423284019352
+    second: balloon-fighter-blue-Photoroom_54
+  - first:
+      213: -8198657354230889164
+    second: balloon-fighter-blue-Photoroom_55
+  - first:
+      213: -8785316603861204746
+    second: balloon-fighter-blue-Photoroom_56
+  - first:
+      213: -3659500158608632707
+    second: balloon-fighter-blue-Photoroom_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1balloon2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 277
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c9e85d3ab252260800000000000000
+      internalID: 7072106772517788727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1balloon3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 277
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b26564135787ab20800000000000000
+      internalID: 3145631655635804849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 272
+        width: 9
+        height: 13
+      alignment: 9
+      pivot: {x: 0.609073, y: 0.8827679}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30203952ead52c8a0800000000000000
+      internalID: -6286359127319707133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 272
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518ebd5f6018e5d80800000000000000
+      internalID: -8260022799656294379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 272
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb560af05eb49080800000000000000
+      internalID: -9181504485300216892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eaa00070c69d8770800000000000000
+      internalID: 8614707415486606057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: float
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 248
+        width: 12
+        height: 12
+      alignment: 9
+      pivot: {x: 0.4575645, y: 0.87450665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0fcdc5f97391e10800000000000000
+      internalID: 2168825853152915710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1balloon4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 250
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52940181d7679d630800000000000000
+      internalID: 3952320427641030949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 251
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f06da2199e2cdf30800000000000000
+      internalID: 4601604154244030708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 251
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f9ae0a181d493f0800000000000000
+      internalID: -894860071259168904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 251
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a4d653aeac10130800000000000000
+      internalID: 3531326690102692506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_01
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 224
+        width: 11
+        height: 14
+      alignment: 9
+      pivot: {x: 0.58977526, y: 0.8918762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8a85ac66f1818c0800000000000000
+      internalID: -4028435340340975369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_02
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 224
+        width: 8
+        height: 14
+      alignment: 9
+      pivot: {x: 0.68618774, y: 0.8896354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f13b68a4824c930800000000000000
+      internalID: 4162496256149757827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pop
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 231
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8801dd39d9b6d3870800000000000000
+      internalID: 8664199582665478280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 226
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c4580895a885950800000000000000
+      internalID: 6438047784339065883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_03
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 224
+        width: 10
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5519203, y: 0.88026077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a0b89955acd7670800000000000000
+      internalID: 8538202937561385570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flap_01
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 200
+        width: 12
+        height: 12
+      alignment: 9
+      pivot: {x: 0.4580399, y: 0.87139255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b75cbd054a4a5f10800000000000000
+      internalID: 2259199823523370929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flap_02
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 200
+        width: 13
+        height: 12
+      alignment: 9
+      pivot: {x: 0.42192194, y: 0.8739497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730fdbd7461c56da0800000000000000
+      internalID: -5952138695149752265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flap_03
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 200
+        width: 12
+        height: 12
+      alignment: 9
+      pivot: {x: 0.45548186, y: 0.8739497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7adaf3567ed26eee0800000000000000
+      internalID: -1232246976179884633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2balloon1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 205
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac074c3fe8d2f2d70800000000000000
+      internalID: 9020478670644736202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2balloon2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 204
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c39f17a9d33c3f60800000000000000
+      internalID: 8015338446717424582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2balloon3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 205
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6b8cbc76d691150800000000000000
+      internalID: 5843822284057917181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Turn_01
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 176
+        width: 10
+        height: 13
+      alignment: 9
+      pivot: {x: 0.6484941, y: 0.8837996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a672e8876711b2ae0800000000000000
+      internalID: -1573144444309461142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Turn_02
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 176
+        width: 10
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5509876, y: 0.8828923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406faefcd23246410800000000000000
+      internalID: 1469338058098406916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2balloon4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 178
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c464852922e062b80800000000000000
+      internalID: -8420026911675627956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fall_02
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 152
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.503744, y: 0.71059036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50435773ac557630800000000000000
+      internalID: 3924144507474624604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fall_03
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 152
+        width: 11
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5102112, y: 0.7375864}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee732b61c60531910800000000000000
+      internalID: 1806876300673169390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1popballoon
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 157
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc19954749ca9810800000000000000
+      internalID: 1772950711271234740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_01
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 128
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5029557, y: 0.70587796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edee8e94d2537d60800000000000000
+      internalID: 7886738445602581993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Die_02
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 128
+        width: 11
+        height: 11
+      alignment: 9
+      pivot: {x: 0.49999964, y: 0.8741011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e9ac43958d50310800000000000000
+      internalID: 1370739539253567007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 132
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8dab5e4e3e94190800000000000000
+      internalID: -7977594692663846682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_45
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 132
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2016ff8177651d30800000000000000
+      internalID: 4401537948268761130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 132
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e9474336711b950800000000000000
+      internalID: 6462972655102631495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Refill_01
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 104
+        width: 8
+        height: 15
+      alignment: 9
+      pivot: {x: 0.6947942, y: 0.9017471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d584809756e965a0800000000000000
+      internalID: -6527432921135675947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rifill_02
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 104
+        width: 9
+        height: 16
+      alignment: 9
+      pivot: {x: 0.7203454, y: 0.90328074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b2dc289f521e060800000000000000
+      internalID: 6980902650972547954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_50
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 106
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1664387284b78b6a0800000000000000
+      internalID: -6433256517867977119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: what
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 80
+        width: 10
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5486719, y: 0.87678784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0622fef277c0310800000000000000
+      internalID: 1372603034200334545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_52
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 84
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24d2af6310af225f0800000000000000
+      internalID: -782788502084768446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_53
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 59
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc89a1df12f6a86b0800000000000000
+      internalID: -5293296220249614132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_54
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 58
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fb0516917ff03c0800000000000000
+      internalID: -4391019423284019352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_55
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 57
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4358ced1394883e80800000000000000
+      internalID: -8198657354230889164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_56
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 33
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0038b6819441680800000000000000
+      internalID: -8785316603861204746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-fighter-blue-Photoroom_57
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 7
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7495ae9ef7d63dc0800000000000000
+      internalID: -3659500158608632707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fall_01
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 152
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.71059036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9512f34772ee24db0b1292bb83f1ce
+      internalID: 2191008936306186442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1balloon1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 277
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a53a1064a73f240a82308106ff084f
+      internalID: 3929339546620651083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 10c944747d93cae49bb37b5275091584
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      1balloon1: 3929339546620651083
+      1balloon2: 7072106772517788727
+      1balloon3: 3145631655635804849
+      1balloon4: 3952320427641030949
+      1popballoon: 1772950711271234740
+      2balloon1: 9020478670644736202
+      2balloon2: 8015338446717424582
+      2balloon3: 5843822284057917181
+      2balloon4: -8420026911675627956
+      Die_01: 7886738445602581993
+      Die_02: 1370739539253567007
+      Fall_01: 2191008936306186442
+      Fall_02: 3924144507474624604
+      Fall_03: 1806876300673169390
+      Flap_01: 2259199823523370929
+      Flap_02: -5952138695149752265
+      Flap_03: -1232246976179884633
+      Refill_01: -6527432921135675947
+      Rifill_02: 6980902650972547954
+      Turn_01: -1573144444309461142
+      Turn_02: 1469338058098406916
+      a: 1772950711271234740
+      balloon-fighter-blue-Photoroom_10: -1669845443970682147
+      balloon-fighter-blue-Photoroom_11: -2898845711152467110
+      balloon-fighter-blue-Photoroom_12: 7219457702597761271
+      balloon-fighter-blue-Photoroom_13: -5425996145668242500
+      balloon-fighter-blue-Photoroom_14: -8260022799656294379
+      balloon-fighter-blue-Photoroom_15: -9181504485300216892
+      balloon-fighter-blue-Photoroom_16: 8614707415486606057
+      balloon-fighter-blue-Photoroom_19: 4601604154244030708
+      balloon-fighter-blue-Photoroom_20: -894860071259168904
+      balloon-fighter-blue-Photoroom_21: 3531326690102692506
+      balloon-fighter-blue-Photoroom_22: 1216533537703533109
+      balloon-fighter-blue-Photoroom_26: 6438047784339065883
+      balloon-fighter-blue-Photoroom_27: 2804441288156207864
+      balloon-fighter-blue-Photoroom_28: -4620822625782470165
+      balloon-fighter-blue-Photoroom_3: 7014609763758887653
+      balloon-fighter-blue-Photoroom_44: -7977594692663846682
+      balloon-fighter-blue-Photoroom_45: 4401537948268761130
+      balloon-fighter-blue-Photoroom_46: 6462972655102631495
+      balloon-fighter-blue-Photoroom_47: 7735608526096113588
+      balloon-fighter-blue-Photoroom_5: 9017329726367231571
+      balloon-fighter-blue-Photoroom_50: -6433256517867977119
+      balloon-fighter-blue-Photoroom_52: -782788502084768446
+      balloon-fighter-blue-Photoroom_53: -5293296220249614132
+      balloon-fighter-blue-Photoroom_54: -4391019423284019352
+      balloon-fighter-blue-Photoroom_55: -8198657354230889164
+      balloon-fighter-blue-Photoroom_56: -8785316603861204746
+      balloon-fighter-blue-Photoroom_57: -3659500158608632707
+      balloon-fighter-blue-Photoroom_6: -3196363944993455774
+      balloon-fighter-blue-Photoroom_7: 3458921185031311128
+      balloon-fighter-blue-Photoroom_9: -3246204715116878048
+      float: 2168825853152915710
+      pop: 8664199582665478280
+      walk: -6286359127319707133
+      walk_01: -4028435340340975369
+      walk_02: 4162496256149757827
+      walk_03: 8538202937561385570
+      what: 1372603034200334545
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
