@@ -1,0 +1,1853 @@
+fileFormatVersion: 2
+guid: 3af85ebbcd0f5894d8953162c91e297b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 589079636296846307
+    second: balloon-bird-green-Photoroom_0
+  - first:
+      213: 3984799455398176845
+    second: balloon-bird-green-Photoroom_1
+  - first:
+      213: 3251484078847348255
+    second: balloon-bird-green-Photoroom_2
+  - first:
+      213: 8039178794617408410
+    second: balloon-bird-green-Photoroom_3
+  - first:
+      213: -7010769675939152362
+    second: balloon-bird-green-Photoroom_4
+  - first:
+      213: -6751992119940236489
+    second: balloon-bird-green-Photoroom_5
+  - first:
+      213: -2355589120412617774
+    second: balloon-bird-green-Photoroom_6
+  - first:
+      213: 8646694952368088080
+    second: balloon-bird-green-Photoroom_7
+  - first:
+      213: 3562782452006061957
+    second: balloon-bird-green-Photoroom_8
+  - first:
+      213: 5385598976639096297
+    second: balloon-bird-green-Photoroom_9
+  - first:
+      213: -807597061884932276
+    second: balloon-bird-green-Photoroom_10
+  - first:
+      213: -456320480552415843
+    second: balloon-bird-green-Photoroom_11
+  - first:
+      213: -6316743632388407638
+    second: balloon-bird-green-Photoroom_12
+  - first:
+      213: 142711321478205817
+    second: balloon-bird-green-Photoroom_13
+  - first:
+      213: -1048907014909889087
+    second: balloon-bird-green-Photoroom_14
+  - first:
+      213: -5851336692592166825
+    second: balloon-bird-green-Photoroom_15
+  - first:
+      213: -7285694674128225894
+    second: balloon-bird-green-Photoroom_16
+  - first:
+      213: 9123384298023527214
+    second: balloon-bird-green-Photoroom_17
+  - first:
+      213: 3424100243258356536
+    second: balloon-bird-green-Photoroom_18
+  - first:
+      213: -3052187338079152264
+    second: balloon-bird-green-Photoroom_19
+  - first:
+      213: -5170884609518204802
+    second: balloon-bird-green-Photoroom_20
+  - first:
+      213: -7030659742382003445
+    second: balloon-bird-green-Photoroom_21
+  - first:
+      213: -965609579651622030
+    second: balloon-bird-green-Photoroom_22
+  - first:
+      213: 8329453420332116334
+    second: balloon-bird-green-Photoroom_23
+  - first:
+      213: -3836600411811095319
+    second: balloon-bird-green-Photoroom_24
+  - first:
+      213: -9151637374256043144
+    second: balloon-bird-green-Photoroom_25
+  - first:
+      213: 549377032424674530
+    second: balloon-bird-green-Photoroom_26
+  - first:
+      213: 632697707066968821
+    second: balloon-bird-green-Photoroom_27
+  - first:
+      213: 8265835532182874538
+    second: balloon-bird-green-Photoroom_28
+  - first:
+      213: -7348191624641331115
+    second: balloon-bird-green-Photoroom_29
+  - first:
+      213: 8836392986280252955
+    second: balloon-bird-green-Photoroom_30
+  - first:
+      213: 3596790263335216482
+    second: balloon-bird-green-Photoroom_31
+  - first:
+      213: 4780142483780797370
+    second: balloon-bird-green-Photoroom_32
+  - first:
+      213: 2637002423064177359
+    second: balloon-bird-green-Photoroom_33
+  - first:
+      213: -5809473880032272249
+    second: balloon-bird-green-Photoroom_34
+  - first:
+      213: 7405184596049776041
+    second: balloon-bird-green-Photoroom_35
+  - first:
+      213: -1764002108636810085
+    second: balloon-bird-green-Photoroom_36
+  - first:
+      213: 6595285210942784742
+    second: balloon-bird-green-Photoroom_37
+  - first:
+      213: -4064245798981455975
+    second: balloon-bird-green-Photoroom_38
+  - first:
+      213: -4414614589585472264
+    second: balloon-bird-green-Photoroom_39
+  - first:
+      213: 3160104240989225665
+    second: balloon-bird-green-Photoroom_40
+  - first:
+      213: -3969335332007255504
+    second: balloon-bird-green-Photoroom_41
+  - first:
+      213: 6917446002801964331
+    second: balloon-bird-green-Photoroom_42
+  - first:
+      213: 2230916247052568411
+    second: balloon-bird-green-Photoroom_43
+  - first:
+      213: -3779215286680343391
+    second: balloon-bird-green-Photoroom_44
+  - first:
+      213: -1368004067464764763
+    second: balloon-bird-green-Photoroom_45
+  - first:
+      213: 5969237569597253434
+    second: balloon-bird-green-Photoroom_46
+  - first:
+      213: 6859599528017606178
+    second: balloon-bird-green-Photoroom_47
+  - first:
+      213: 6596326615823123791
+    second: balloon-bird-green-Photoroom_48
+  - first:
+      213: 1483615306944646624
+    second: balloon-bird-green-Photoroom_49
+  - first:
+      213: 2420252053583280231
+    second: balloon-bird-green-Photoroom_50
+  - first:
+      213: 3434914893785128286
+    second: balloon-bird-green-Photoroom_51
+  - first:
+      213: 3821729762419782958
+    second: balloon-bird-green-Photoroom_52
+  - first:
+      213: 4999361705153169628
+    second: balloon-bird-green-Photoroom_53
+  - first:
+      213: -2616867767223680896
+    second: balloon-bird-green-Photoroom_54
+  - first:
+      213: 4332335236313276577
+    second: balloon-bird-green-Photoroom_55
+  - first:
+      213: 439584985941916641
+    second: balloon-bird-green-Photoroom_56
+  - first:
+      213: 4815503655959742819
+    second: balloon-bird-green-Photoroom_57
+  - first:
+      213: -7195685660644457497
+    second: balloon-bird-green-Photoroom_58
+  - first:
+      213: 2509162836807504206
+    second: balloon-bird-green-Photoroom_59
+  - first:
+      213: 2863079868278179217
+    second: balloon-bird-green-Photoroom_60
+  - first:
+      213: -3893847417659259377
+    second: balloon-bird-green-Photoroom_61
+  - first:
+      213: -3254008446529246899
+    second: balloon-bird-green-Photoroom_62
+  - first:
+      213: 4467228980479126589
+    second: balloon-bird-green-Photoroom_63
+  - first:
+      213: -447276492557049851
+    second: balloon-bird-green-Photoroom_64
+  - first:
+      213: -5904087485631190665
+    second: balloon-bird-green-Photoroom_65
+  - first:
+      213: 5364777216023282555
+    second: balloon-bird-green-Photoroom_66
+  - first:
+      213: -8037503240915679313
+    second: balloon-bird-green-Photoroom_67
+  - first:
+      213: 8760082961587691285
+    second: balloon-bird-green-Photoroom_68
+  - first:
+      213: -1112183015840489421
+    second: balloon-bird-green-Photoroom_69
+  - first:
+      213: 2800176084411110353
+    second: balloon-bird-green-Photoroom_70
+  - first:
+      213: 1142239119267716674
+    second: balloon-bird-green-Photoroom_71
+  - first:
+      213: -101459854418358515
+    second: balloon-bird-green-Photoroom_72
+  - first:
+      213: -1113668841807046163
+    second: balloon-bird-green-Photoroom_73
+  - first:
+      213: -1338269080857587108
+    second: balloon-bird-green-Photoroom_74
+  - first:
+      213: -4232643093011949307
+    second: balloon-bird-green-Photoroom_75
+  - first:
+      213: 8807220758911003758
+    second: balloon-bird-green-Photoroom_76
+  - first:
+      213: 2867356758152547139
+    second: balloon-bird-green-Photoroom_77
+  - first:
+      213: -8228660593744603105
+    second: balloon-bird-green-Photoroom_78
+  - first:
+      213: -7568650017453475336
+    second: balloon-bird-green-Photoroom_79
+  - first:
+      213: 7682576071411452461
+    second: balloon-bird-green-Photoroom_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idle
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 272
+        width: 12
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4319943, y: 0.7119664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ebc3e1eec4dc2800800000000000000
+      internalID: 589079636296846307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 275
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b06033586e09f60800000000000000
+      internalID: 8039178794617408410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 288
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ef097df1eb4be90800000000000000
+      internalID: -7010769675939152362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 288
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bb9b4c0fa1c42a0800000000000000
+      internalID: -6751992119940236489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 275
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3f709ec244f4fd0800000000000000
+      internalID: -2355589120412617774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 288
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014201d3f3b3ff770800000000000000
+      internalID: 8646694952368088080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 275
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58701df73cb817130800000000000000
+      internalID: 3562782452006061957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 288
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e5d7413cbd7dba40800000000000000
+      internalID: 5385598976639096297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 288
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f03b440c6dac4f0800000000000000
+      internalID: -807597061884932276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 288
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d00fcc0f2daa9f0800000000000000
+      internalID: -456320480552415843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 288
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae3746422b6658a0800000000000000
+      internalID: -6316743632388407638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 270
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9719226d0330bf100800000000000000
+      internalID: 142711321478205817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 264
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c571e590a88171f0800000000000000
+      internalID: -1048907014909889087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 264
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758b5d0a740ebcea0800000000000000
+      internalID: -5851336692592166825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99b1ae8b4304ea90800000000000000
+      internalID: -7285694674128225894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 264
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23a1196ea5cc9e70800000000000000
+      internalID: 9123384298023527214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8333eb29709d48f20800000000000000
+      internalID: 3424100243258356536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877d8d589c374a5d0800000000000000
+      internalID: -3052187338079152264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78022b18d35d38b0800000000000000
+      internalID: -5170884609518204802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 264
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b6eaed6341e6e90800000000000000
+      internalID: -7030659742382003445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b962d04377992f0800000000000000
+      internalID: -965609579651622030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e69ee0421c9289370800000000000000
+      internalID: 8329453420332116334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 264
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ecd1eca048a1cac0800000000000000
+      internalID: -3836600411811095319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 270
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ba74aab4adef080800000000000000
+      internalID: -9151637374256043144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 264
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e45e611087cf9700800000000000000
+      internalID: 549377032424674530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 264
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa4eef563bc7c800800000000000000
+      internalID: 632697707066968821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 264
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9ef8b4f9526b270800000000000000
+      internalID: 8265835532182874538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fall
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 248
+        width: 15
+        height: 13
+      alignment: 9
+      pivot: {x: 0.35656968, y: 0.7349294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 550c0c756aaf50a90800000000000000
+      internalID: -7348191624641331115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 248
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16dcf29a9c21aa70800000000000000
+      internalID: 8836392986280252955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 249
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 265eda910bd5ae130800000000000000
+      internalID: 3596790263335216482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_32
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 249
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab30281434a765240800000000000000
+      internalID: 4780142483780797370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 249
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcaa59a7bb3889420800000000000000
+      internalID: 2637002423064177359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 224
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9adcdbfd72084c660800000000000000
+      internalID: 7405184596049776041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 224
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4c1aeb4f8278b50800000000000000
+      internalID: 6595285210942784742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 224
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f26d7aaf5e897c0800000000000000
+      internalID: -4064245798981455975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_39
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 229
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f4408f9b632cb2c0800000000000000
+      internalID: -4414614589585472264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_40
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 225
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c24e517012fadb20800000000000000
+      internalID: 3160104240989225665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_41
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 240
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032ec45cb861ae8c0800000000000000
+      internalID: -3969335332007255504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 240
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25f4f54d74bfff50800000000000000
+      internalID: 6917446002801964331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 240
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57473db18ec5fe10800000000000000
+      internalID: 2230916247052568411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 240
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac21bb48b78d8bc0800000000000000
+      internalID: -3779215286680343391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_45
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 240
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a229737c8fd30de0800000000000000
+      internalID: -1368004067464764763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37a2c371fdf6d250800000000000000
+      internalID: 5969237569597253434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 200
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2263de05d61323f50800000000000000
+      internalID: 6859599528017606178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 200
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f458796bb1cda8b50800000000000000
+      internalID: 6596326615823123791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fky3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 200
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed84c9d24cd69410800000000000000
+      internalID: 1483615306944646624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_50
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 203
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 768bdb07b66769120800000000000000
+      internalID: 2420252053583280231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_51
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 202
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dd2cd95e44baf20800000000000000
+      internalID: 3434914893785128286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_52
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 203
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e25b19478f2890530800000000000000
+      internalID: 3821729762419782958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_54
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080867661a40fabd0800000000000000
+      internalID: -2616867767223680896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_60
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 155
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1950b4098f3bbb720800000000000000
+      internalID: 2863079868278179217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 129
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49e080fe8077d2d0800000000000000
+      internalID: -3254008446529246899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_66
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 131
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b734d244474837a40800000000000000
+      internalID: 5364777216023282555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_67
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 130
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa78b2c036d057090800000000000000
+      internalID: -8037503240915679313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_68
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 130
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51fd2686a01129970800000000000000
+      internalID: 8760082961587691285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: die2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 130
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330ea9f807bb090f0800000000000000
+      internalID: -1112183015840489421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_73
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 105
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de99baeb6147b80f0800000000000000
+      internalID: -1113668841807046163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_75
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 82
+        width: 28
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509130c4881a245c0800000000000000
+      internalID: -4232643093011949307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_76
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 57
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c26591e98893a70800000000000000
+      internalID: 8807220758911003758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_77
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 58
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b8ff597c5eac720800000000000000
+      internalID: 2867356758152547139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_78
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 57
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18199c89ccedcd80800000000000000
+      internalID: -8228660593744603105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_79
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 33
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f97e68d8e0c6f690800000000000000
+      internalID: -7568650017453475336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: balloon-bird-green-Photoroom_80
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 7
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a4560ab3efd9a60800000000000000
+      internalID: 7682576071411452461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 15ff3192132e9d04c8fbf6cff775faa2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      balloon-bird-green-Photoroom_1: 3984799455398176845
+      balloon-bird-green-Photoroom_10: -807597061884932276
+      balloon-bird-green-Photoroom_11: -456320480552415843
+      balloon-bird-green-Photoroom_12: -6316743632388407638
+      balloon-bird-green-Photoroom_13: 142711321478205817
+      balloon-bird-green-Photoroom_14: -1048907014909889087
+      balloon-bird-green-Photoroom_15: -5851336692592166825
+      balloon-bird-green-Photoroom_16: -7285694674128225894
+      balloon-bird-green-Photoroom_17: 9123384298023527214
+      balloon-bird-green-Photoroom_18: 3424100243258356536
+      balloon-bird-green-Photoroom_19: -3052187338079152264
+      balloon-bird-green-Photoroom_2: 3251484078847348255
+      balloon-bird-green-Photoroom_20: -5170884609518204802
+      balloon-bird-green-Photoroom_21: -7030659742382003445
+      balloon-bird-green-Photoroom_22: -965609579651622030
+      balloon-bird-green-Photoroom_23: 8329453420332116334
+      balloon-bird-green-Photoroom_24: -3836600411811095319
+      balloon-bird-green-Photoroom_25: -9151637374256043144
+      balloon-bird-green-Photoroom_26: 549377032424674530
+      balloon-bird-green-Photoroom_27: 632697707066968821
+      balloon-bird-green-Photoroom_28: 8265835532182874538
+      balloon-bird-green-Photoroom_3: 8039178794617408410
+      balloon-bird-green-Photoroom_30: 8836392986280252955
+      balloon-bird-green-Photoroom_31: 3596790263335216482
+      balloon-bird-green-Photoroom_32: 4780142483780797370
+      balloon-bird-green-Photoroom_33: 2637002423064177359
+      balloon-bird-green-Photoroom_34: -5809473880032272249
+      balloon-bird-green-Photoroom_36: -1764002108636810085
+      balloon-bird-green-Photoroom_39: -4414614589585472264
+      balloon-bird-green-Photoroom_4: -7010769675939152362
+      balloon-bird-green-Photoroom_40: 3160104240989225665
+      balloon-bird-green-Photoroom_41: -3969335332007255504
+      balloon-bird-green-Photoroom_42: 6917446002801964331
+      balloon-bird-green-Photoroom_43: 2230916247052568411
+      balloon-bird-green-Photoroom_44: -3779215286680343391
+      balloon-bird-green-Photoroom_45: -1368004067464764763
+      balloon-bird-green-Photoroom_46: 5969237569597253434
+      balloon-bird-green-Photoroom_5: -6751992119940236489
+      balloon-bird-green-Photoroom_50: 2420252053583280231
+      balloon-bird-green-Photoroom_51: 3434914893785128286
+      balloon-bird-green-Photoroom_52: 3821729762419782958
+      balloon-bird-green-Photoroom_53: 4999361705153169628
+      balloon-bird-green-Photoroom_54: -2616867767223680896
+      balloon-bird-green-Photoroom_55: 4332335236313276577
+      balloon-bird-green-Photoroom_56: 439584985941916641
+      balloon-bird-green-Photoroom_57: 4815503655959742819
+      balloon-bird-green-Photoroom_58: -7195685660644457497
+      balloon-bird-green-Photoroom_59: 2509162836807504206
+      balloon-bird-green-Photoroom_6: -2355589120412617774
+      balloon-bird-green-Photoroom_60: 2863079868278179217
+      balloon-bird-green-Photoroom_61: -3893847417659259377
+      balloon-bird-green-Photoroom_63: 4467228980479126589
+      balloon-bird-green-Photoroom_64: -447276492557049851
+      balloon-bird-green-Photoroom_65: -5904087485631190665
+      balloon-bird-green-Photoroom_66: 5364777216023282555
+      balloon-bird-green-Photoroom_67: -8037503240915679313
+      balloon-bird-green-Photoroom_68: 8760082961587691285
+      balloon-bird-green-Photoroom_7: 8646694952368088080
+      balloon-bird-green-Photoroom_70: 2800176084411110353
+      balloon-bird-green-Photoroom_71: 1142239119267716674
+      balloon-bird-green-Photoroom_72: -101459854418358515
+      balloon-bird-green-Photoroom_73: -1113668841807046163
+      balloon-bird-green-Photoroom_74: -1338269080857587108
+      balloon-bird-green-Photoroom_75: -4232643093011949307
+      balloon-bird-green-Photoroom_76: 8807220758911003758
+      balloon-bird-green-Photoroom_77: 2867356758152547139
+      balloon-bird-green-Photoroom_78: -8228660593744603105
+      balloon-bird-green-Photoroom_79: -7568650017453475336
+      balloon-bird-green-Photoroom_8: 3562782452006061957
+      balloon-bird-green-Photoroom_80: 7682576071411452461
+      balloon-bird-green-Photoroom_9: 5385598976639096297
+      die1: -3254008446529246899
+      die2: -1112183015840489421
+      fall: -7348191624641331115
+      fky3: 1483615306944646624
+      fly1: 6859599528017606178
+      fly2: 6596326615823123791
+      idle: 589079636296846307
+      walk1: 7405184596049776041
+      walk2: 6595285210942784742
+      walk3: -4064245798981455975
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

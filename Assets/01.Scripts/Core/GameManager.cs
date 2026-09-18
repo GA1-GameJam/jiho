@@ -9,12 +9,13 @@ public sealed class GameManager : MonoBehaviour
     [SerializeField] private int _enemyScore = 500;
     [SerializeField, Min(0f)] private float _winSoundDelay = 1.3f;
     [SerializeField, Min(0f)] private float _nextStageDelay = 1.5f;
-
+    
     [Header("카메라와 스폰")]
     [SerializeField] private Camera _gameCamera;
+    [SerializeField] private CameraShake _cameraShake;
     [SerializeField] private int _phaseEnemyOffset = 2;
     [SerializeField] private int _enemyPoolCapacity = 5;
-
+    
     [Header("플레이어 스폰 위치")]
     [SerializeField] private Transform _playerOneSpawn;
     [SerializeField] private Transform _playerTwoSpawn;
@@ -94,6 +95,14 @@ public sealed class GameManager : MonoBehaviour
             return;
         }
 
+        if (_cameraShake == null)
+        {
+            _cameraShake =
+                _gameCamera.GetComponent<CameraShake>();
+        }
+
+        _mapBoundary.SetCamera(_gameCamera);
+
         _mapBoundary.SetCamera(_gameCamera);
 
         _spawner = new FighterSpawner(
@@ -151,6 +160,7 @@ public sealed class GameManager : MonoBehaviour
     {
         _popPool?.Play(position);
         PlaySound(_balloonPopSound);
+        _cameraShake?.Play();
     }
 
     internal void PlayJumpSound()

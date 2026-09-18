@@ -67,15 +67,21 @@ public sealed class PlayerController : Fighter
     {
         _playerNumber = playerNumber;
 
-        Initialize(game, _balloonLimit);
+        Initialize(
+            game,
+            _balloonLimit);
 
-        _visual = transform.Find("Visual");
+        _visual =
+            transform.Find("Visual");
 
         if (_visual == null)
         {
             Debug.LogError(
                 $"{name} 아래에 Visual 오브젝트가 없습니다.",
                 this);
+
+            _animator = null;
+            _spriteRenderer = null;
         }
         else
         {
@@ -84,19 +90,49 @@ public sealed class PlayerController : Fighter
 
             _spriteRenderer =
                 _visual.GetComponent<SpriteRenderer>();
+
+            if (_animator == null)
+            {
+                Debug.LogError(
+                    $"{name}/Visual에 Animator가 없습니다.",
+                    this);
+            }
+
+            if (_spriteRenderer == null)
+            {
+                Debug.LogError(
+                    $"{name}/Visual에 SpriteRenderer가 없습니다.",
+                    this);
+            }
         }
+
         _balloonVisual =
             GetComponentInChildren<BalloonVisual>(true);
+
+        if (_balloonVisual == null)
+        {
+            Debug.LogError(
+                $"{name} 아래에 BalloonVisual이 없습니다.",
+                this);
+        }
+        else
+        {
+            _balloonVisual.ResetState(
+                BalloonCount);
+        }
 
         _groundColliders.Clear();
         _isGrounded = false;
 
-        Body.gravityScale = _gravityScale;
-        Body.linearDamping = _airDamping;
+        Body.gravityScale =
+            _gravityScale;
+
+        Body.linearDamping =
+            _airDamping;
 
         ResetAnimator();
     }
-
+    
     private void Update()
     {
         if (IsDead
