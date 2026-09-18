@@ -12,7 +12,9 @@ public sealed class PlayerController : Fighter
     [SerializeField] private float _airAcceleration = 9f;
     [SerializeField] private float _groundDamping = 2.2f;
     [SerializeField] private float _airDamping = 0.12f;
-    [SerializeField] private Vector3 _velocityLimits = new(5.8f, 6.4f, 6.2f);
+
+    [SerializeField] private Vector3 _velocityLimits =
+        new(5.8f, 6.4f, 6.2f);
 
     [Header("피격과 연출")]
     [SerializeField] private float _hitProtection = 0.65f;
@@ -30,44 +32,104 @@ public sealed class PlayerController : Fighter
 
     internal int BalloonLimit => _balloonLimit;
     internal PlayerNumber PlayerNumber => _playerNumber;
-    internal bool IsAvailable => gameObject.activeSelf && !IsDead;
 
-    internal void InitializePlayer(GameManager game, PlayerNumber playerNumber)
+    internal bool IsAvailable =>
+        gameObject.activeSelf && !IsDead;
+
+    internal void InitializePlayer(
+        GameManager game,
+        PlayerNumber playerNumber)
     {
         _playerNumber = playerNumber;
+
         Initialize(game, _balloonLimit);
+
         _visual = transform.Find("Visual");
         _isGrounded = false;
+
         Body.gravityScale = _gravityScale;
         Body.linearDamping = _airDamping;
     }
 
     private void Update()
     {
-        if (IsDead || Game == null || !Game.IsPlaying || !Game.Input.IsFlapPressed(_playerNumber)) return;
-        float flapForce = BalloonCount >= _balloonLimit ? _normalFlapForce : _damagedFlapForce;
-        Body.AddForce(Vector2.up * flapForce, ForceMode2D.Impulse);
+        if (IsDead
+            || Game == null
+            || !Game.IsPlaying
+            || !Game.Input.IsFlapPressed(
+                _playerNumber))
+        {
+            return;
+        }
+
+        if (_isGrounded)
+        {
+            Game.PlayJumpSound();
+        }
+        else
+        {
+            Game.PlayFlapSound();
+        }
+
+        float flapForce =
+            BalloonCount >= _balloonLimit
+                ? _normalFlapForce
+                : _damagedFlapForce;
+
+        Body.AddForce(
+            Vector2.up * flapForce,
+            ForceMode2D.Impulse);
+
         _isGrounded = false;
     }
 
     private void FixedUpdate()
     {
-        if (IsDead || Game == null || !Game.IsPlaying) return;
-        float horizontalInput = Game.Input.GetHorizontal(_playerNumber);
-        float acceleration = _isGrounded ? _groundAcceleration : _airAcceleration;
-        Body.AddForce(Vector2.right * horizontalInput * acceleration);
-        Body.linearDamping = _isGrounded ? _groundDamping : _airDamping;
+        if (IsDead
+            || Game == null
+            || !Game.IsPlaying)
+        {
+            return;
+        }
+
+        float horizontalInput =
+            Game.Input.GetHorizontal(
+                _playerNumber);
+
+        float acceleration =
+            _isGrounded
+                ? _groundAcceleration
+                : _airAcceleration;
+
+        Body.AddForce(
+            Vector2.right
+            * horizontalInput
+            * acceleration);
+
+        Body.linearDamping =
+            _isGrounded
+                ? _groundDamping
+                : _airDamping;
+
         ClampVelocity(_velocityLimits);
+
         Game.ClampVertical(transform, Body);
         Game.Wrap(transform);
+
         UpdateVisualTilt();
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionStay2D(
+        Collision2D collision)
     {
-        for (int index = 0; index < collision.contactCount; index++)
+        for (int index = 0;
+             index < collision.contactCount;
+             index++)
         {
-            if (collision.GetContact(index).normal.y > _groundNormalThreshold)
+            if (collision
+                .GetContact(index)
+                .normal.y
+                > _groundNormalThreshold)
             {
                 _isGrounded = true;
                 return;
@@ -75,7 +137,11 @@ public sealed class PlayerController : Fighter
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision) => _isGrounded = false;
+    private void OnCollisionExit2D(
+        Collision2D collision)
+    {
+        _isGrounded = false;
+    }
 
     protected override void OnBalloonLost()
     {
@@ -88,17 +154,21 @@ public sealed class PlayerController : Fighter
             return;
         }
 
-        Die();
+        Die(true);
     }
 
     protected override void OnFellIntoWater()
     {
-        Die();
+        Game.PlayWaterDeathSound();
+        Die(false);
     }
 
-    protected override float GetHitProtection() => _hitProtection;
+    protected override float GetHitProtection()
+    {
+        return _hitProtection;
+    }
 
-    private void Die()
+    private void Die(bool playKillSound)
     {
         if (IsDead)
         {
@@ -114,19 +184,38 @@ public sealed class PlayerController : Fighter
 
         Game.PlayerDefeated(this);
 
-        StartCoroutine(DisableAfterDelay());
+        StartCoroutine(
+            DisableAfterDelay(playKillSound));
     }
 
-    private IEnumerator DisableAfterDelay()
+    private IEnumerator DisableAfterDelay(
+        bool playKillSound)
     {
-        yield return new WaitForSeconds(_deathDelay);
+        yield return new WaitForSeconds(
+            _deathDelay);
+
+        if (playKillSound)
+        {
+            Game.PlayKillSound();
+        }
+
         gameObject.SetActive(false);
     }
 
     private void UpdateVisualTilt()
     {
-        if (_visual == null) return;
-        float tilt = Mathf.Clamp(-Body.linearVelocity.x * _visualTiltMultiplier, -_maximumVisualTilt, _maximumVisualTilt);
-        _visual.localRotation = Quaternion.Euler(0f, 0f, tilt);
+        if (_visual == null)
+        {
+            return;
+        }
+
+        float tilt = Mathf.Clamp(
+            -Body.linearVelocity.x
+            * _visualTiltMultiplier,
+            -_maximumVisualTilt,
+            _maximumVisualTilt);
+
+        _visual.localRotation =
+            Quaternion.Euler(0f, 0f, tilt);
     }
 }

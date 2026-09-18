@@ -57,11 +57,28 @@ public abstract class Fighter : MonoBehaviour
 
     internal void PopBalloon(BalloonHitTarget target)
     {
-        if (_isDead || target == null || Time.time < _invincibleUntil || !target.gameObject.activeSelf) return;
+        if (_isDead
+            || target == null
+            || Time.time < _invincibleUntil
+            || !target.gameObject.activeSelf)
+        {
+            return;
+        }
+
         Game.BalloonPopped(target.transform.position);
+
         target.gameObject.SetActive(false);
+
         _balloonCount = Mathf.Max(0, _balloonCount - 1);
-        _invincibleUntil = Time.time + GetHitProtection();
+
+        if (_balloonCount <= 0)
+        {
+            Game.PlayFallingSound();
+        }
+
+        _invincibleUntil =
+            Time.time + GetHitProtection();
+
         OnBalloonLost();
     }
     internal void FallIntoWater()
