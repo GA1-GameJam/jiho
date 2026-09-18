@@ -215,7 +215,25 @@ public sealed class PlayerController : Fighter
         _isGrounded =
             _groundColliders.Count > 0;
     }
-    
+    protected override void OnBalloonLost()
+    {
+        if (_balloonVisual != null)
+        {
+            _balloonVisual.SetBalloonCount(
+                BalloonCount);
+        }
+
+        Body.AddForce(
+            Vector2.down * _balloonLossImpulse,
+            ForceMode2D.Impulse);
+
+        if (BalloonCount > 0)
+        {
+            return;
+        }
+
+        Die(true);
+    }
 
     protected override void OnFellIntoWater()
     {
