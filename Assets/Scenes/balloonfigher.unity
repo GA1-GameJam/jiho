@@ -747,6 +747,7 @@ GameObject:
   - component: {fileID: 291610250}
   - component: {fileID: 291610249}
   - component: {fileID: 291610252}
+  - component: {fileID: 291610253}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -872,6 +873,20 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &291610253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291610248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588cc52b138b4ff498d2191d4827aa72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
+  _duration: 0.2
+  _strength: 0.25
 --- !u!1 &299212708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1280,7 @@ MonoBehaviour:
   _winSoundDelay: 1.3
   _nextStageDelay: 1.5
   _gameCamera: {fileID: 291610250}
+  _cameraShake: {fileID: 291610253}
   _phaseEnemyOffset: 2
   _enemyPoolCapacity: 5
   _playerOneSpawn: {fileID: 1268138461}
@@ -1277,7 +1293,7 @@ MonoBehaviour:
   - {fileID: 1465268183}
   _playerPrefabs:
   - {fileID: 1332835658434913958, guid: d8ae0658754ab2c47b5b5ee02c49e4b1, type: 3}
-  - {fileID: 0}
+  - {fileID: 1332835658434913958, guid: f1f2c2fe52a44b44992f47f732934a2d, type: 3}
   _enemyPrefabs: []
   _input: {fileID: 357883017}
   _mapBoundary: {fileID: 357883016}

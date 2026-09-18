@@ -1356,7 +1356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fky3
+      name: fly3
       rect:
         serializedVersion: 2
         x: 56
@@ -1839,9 +1839,9 @@ TextureImporter:
       die1: -3254008446529246899
       die2: -1112183015840489421
       fall: -7348191624641331115
-      fky3: 1483615306944646624
       fly1: 6859599528017606178
       fly2: 6596326615823123791
+      fly3: 1483615306944646624
       idle: 589079636296846307
       walk1: 7405184596049776041
       walk2: 6595285210942784742
